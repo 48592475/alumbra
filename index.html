@@ -3,257 +3,313 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alumbra Iluminación | Lámparas de mesa, de pie, colgantes y apliques</title>
-<meta name="description" content="Alumbra Iluminación: lámparas de escritorio, de mesa, de pie, colgantes y apliques para decorar tu casa. Envíos a todo el país.">
+<title>Alumbra Iluminación</title>
+<meta name="description" content="Alumbra Iluminación: lámparas de escritorio, de mesa, de pie, colgantes y apliques para decorar tu casa. Consultas por WhatsApp y envíos a todo el país.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+/* Tienda de diseño: fondo cálido claro, títulos con serif clásica, texto grande y legible */
 :root{
-  --azul:#3b2f27; --azul2:#5a4637; --amarillo:#c9953f; --rojo:#c62828; --verde:#2e7d32;
-  --texto:#222; --gris:#5f6368; --borde:#e0e0e0; --fondo:#f3f0ea; --blanco:#fff;
+  --papel:#faf8f4;      /* fondo general */
+  --lino:#f1ebe2;       /* fondos de fotos y secciones */
+  --arena:#e4dacb;      /* bordes y líneas */
+  --tinta:#2b2520;      /* texto principal */
+  --tinta2:#6b6158;     /* texto secundario */
+  --laton:#9c6f35;      /* acento (latón / dorado viejo) */
+  --wa:#1fa855;
+  --f-titulo:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --f-texto:"Jost", "Segoe UI", Arial, sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Open Sans",Arial,sans-serif;font-size:17px;color:var(--texto);background:var(--blanco);line-height:1.5}
+html{scroll-behavior:smooth}
+body{font-family:var(--f-texto);font-size:17px;line-height:1.6;color:var(--tinta);background:var(--papel);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-button{font:inherit;cursor:pointer}
-.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+button{font:inherit;cursor:pointer;color:inherit;background:none;border:0}
+:focus-visible{outline:2px solid var(--laton);outline-offset:2px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+h1,h2,h3{font-family:var(--f-titulo);font-weight:600;line-height:1.1;text-wrap:balance}
+.eyebrow{display:block;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--laton);font-weight:500;margin-bottom:14px}
 
 /* Franja superior */
-.franja{background:var(--azul);color:#fff;font-size:15px}
-.franja .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
-.franja b{color:var(--amarillo)}
+.franja{background:var(--tinta);color:#eee6da;font-size:14px;letter-spacing:.03em}
+.franja .wrap{display:flex;justify-content:center;gap:28px;padding-block:9px;flex-wrap:wrap;text-align:center}
+.franja b{color:#e3c08a;font-weight:500}
 
 /* Cabecera */
-.cabecera{border-bottom:1px solid var(--borde);background:#fff}
-.cabecera .wrap{display:flex;align-items:center;gap:24px;padding-top:18px;padding-bottom:18px}
-.logo{display:flex;flex-direction:column;line-height:1}
-.logo strong{font-size:30px;font-weight:800;color:var(--azul);letter-spacing:-.5px}
-.logo strong span{color:var(--amarillo)}
-.logo small{font-size:12px;color:var(--gris);letter-spacing:3px;text-transform:uppercase;margin-top:4px}
-.buscador{flex:1;display:flex;max-width:560px}
-.buscador input{flex:1;border:2px solid var(--borde);border-right:0;border-radius:6px 0 0 6px;padding:12px 14px;font:inherit}
-.buscador input:focus{outline:none;border-color:var(--azul)}
-.buscador button{background:var(--azul);color:#fff;border:0;padding:0 20px;border-radius:0 6px 6px 0;font-weight:700}
-.acciones{display:flex;gap:10px;margin-left:auto}
-.btn-wa-top{display:flex;white-space:nowrap;align-items:center;gap:10px;background:#25d366;border:0;border-radius:6px;padding:12px 18px;font-weight:700;color:#fff}
+header{position:sticky;top:env(safe-area-inset-top, 0px);z-index:50;background:rgba(250,248,244,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--arena)}
+.cab{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;padding-block:16px}
+.buscador{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--tinta2);max-width:300px;padding:6px 2px}
+.buscador input{border:0;background:none;font:inherit;font-size:16px;flex:1;min-width:0;color:var(--tinta)}
+.buscador input:focus{outline:none}
+.buscador svg{width:20px;height:20px;flex-shrink:0;stroke:var(--tinta2)}
+.logo{display:flex;flex-direction:column;align-items:center;line-height:1}
+.logo strong{font-family:var(--f-titulo);font-size:38px;font-weight:700;letter-spacing:.02em}
+.logo small{font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--laton);margin-top:4px;padding-left:.42em}
+.cab-der{display:flex;justify-content:flex-end}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:#fff;font-weight:500;padding:11px 18px;border-radius:40px;font-size:15px;white-space:nowrap}
+.btn-wa:hover{background:#178f47}
+.btn-wa svg{width:18px;height:18px}
+.menu{border-top:1px solid var(--arena)}
+.menu .wrap{display:flex;justify-content:center;gap:6px;overflow-x:auto;scrollbar-width:none}
+.menu button{padding:14px 18px;font-size:14px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;color:var(--tinta2);position:relative;font-weight:500}
+.menu button::after{content:"";position:absolute;left:18px;right:18px;bottom:8px;height:1px;background:var(--laton);transform:scaleX(0);transition:transform .25s}
+.menu button:hover,.menu button.activo{color:var(--tinta)}
+.menu button:hover::after,.menu button.activo::after{transform:scaleX(1)}
 
-/* Menú */
-.menu{background:var(--fondo);border-bottom:1px solid var(--borde)}
-.menu .wrap{display:flex;gap:4px;overflow-x:auto}
-.menu button{background:none;border:0;padding:14px 14px;font-weight:600;color:var(--azul);white-space:nowrap;border-bottom:3px solid transparent}
-.menu button:hover,.menu button.activo{border-bottom-color:var(--amarillo)}
+/* Portada */
+.hero{padding-block:56px 40px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(44px,6vw,76px);font-weight:600;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--laton)}
+.hero p{font-size:19px;color:var(--tinta2);margin:22px 0 32px;max-width:470px}
+.acciones{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 30px;border-radius:40px;font-weight:500;font-size:16px;transition:background .2s,color .2s,border-color .2s}
+.btn-oscuro{background:var(--tinta);color:#fff}
+.btn-oscuro:hover{background:var(--laton)}
+.btn-linea{border:1px solid var(--tinta);color:var(--tinta)}
+.btn-linea:hover{background:var(--tinta);color:#fff}
+.datos{display:flex;gap:36px;margin-top:44px;padding-top:26px;border-top:1px solid var(--arena)}
+.datos b{display:block;font-family:var(--f-titulo);font-size:34px;font-weight:600;line-height:1}
+.datos span{font-size:14px;color:var(--tinta2)}
+.hero-arte{position:relative;max-width:100%}
+.hero-arte svg{width:100%;height:auto;display:block}
 
-/* Banner */
-.banner{background:linear-gradient(90deg,var(--azul) 0%,var(--azul2) 100%);color:#fff}
-.banner .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center;padding-top:44px;padding-bottom:44px}
-.banner h1{font-size:38px;line-height:1.2;font-weight:800;margin-bottom:14px}
-.banner p{font-size:19px;opacity:.92;margin-bottom:24px}
-.btn{display:inline-block;border:0;border-radius:6px;padding:14px 26px;font-weight:700;font-size:17px}
-.btn-amarillo{background:var(--amarillo);color:#fff}
-.btn-amarillo:hover{background:#d9a54d}
-.btn-borde{border:2px solid #fff;color:#fff;margin-left:8px}
-.oferta{background:#fff;color:var(--texto);border-radius:10px;padding:24px;box-shadow:0 6px 20px rgba(0,0,0,.2)}
-.oferta .et{display:inline-block;background:var(--rojo);color:#fff;font-weight:700;font-size:14px;padding:4px 10px;border-radius:4px;margin-bottom:10px}
-.oferta h3{font-size:22px;color:var(--azul);margin-bottom:6px}
-.oferta ul{list-style:none;margin:12px 0;color:var(--gris)}
-.oferta li{padding:4px 0}
-.oferta li::before{content:"✔ ";color:var(--verde);font-weight:700}
-
-/* Beneficios */
-.beneficios{border-bottom:1px solid var(--borde)}
-.beneficios .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding-top:24px;padding-bottom:24px}
-.benef{display:flex;gap:12px;align-items:center}
-.benef svg{flex-shrink:0;width:42px;height:42px;stroke:var(--azul);fill:none;stroke-width:1.6}
-.benef b{display:block;color:var(--azul)}
-.benef span{font-size:15px;color:var(--gris)}
-
-/* Títulos */
-.seccion{padding:44px 0}
-.titulo{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:22px;flex-wrap:wrap}
-.titulo h2{font-size:28px;color:var(--azul)}
-.titulo p{color:var(--gris)}
-select{font:inherit;padding:10px 12px;border:2px solid var(--borde);border-radius:6px;background:#fff}
+/* Categorías */
+.seccion{padding-block:64px;scroll-margin-top:120px}
+.cabeza{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:32px;flex-wrap:wrap}
+.cabeza h2{font-size:clamp(34px,4vw,48px)}
+.cats{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.cat{background:var(--lino);border-radius:6px;padding:22px 14px 20px;text-align:center;transition:background .25s}
+.cat:hover{background:var(--arena)}
+.cat svg{width:100%;max-width:140px;aspect-ratio:200/250;margin:0 auto 10px;display:block}
+.cat b{display:block;font-family:var(--f-titulo);font-size:24px;font-weight:600}
+.cat span{font-size:14px;color:var(--tinta2)}
 
 /* Productos */
-.grilla{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.prod{border:1px solid var(--borde);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;background:#fff;transition:box-shadow .2s}
-.prod:hover{box-shadow:0 4px 16px rgba(0,0,0,.1)}
-.foto{position:relative;aspect-ratio:1;background:#f7f7f7;display:grid;place-items:center;cursor:pointer;border-bottom:1px solid var(--borde)}
-.foto img{width:100%;height:100%;object-fit:contain;background:#fff}
-.foto svg{width:58%;height:58%}
-.etiqueta{position:absolute;top:10px;left:10px;background:var(--rojo);color:#fff;font-size:13px;font-weight:700;padding:3px 9px;border-radius:4px}
-.etiqueta.azul{background:var(--azul)}
-.info{padding:14px;display:flex;flex-direction:column;gap:4px;flex:1}
-.info h3{font-size:17px;font-weight:600;line-height:1.3;cursor:pointer}
-.info .det{font-size:15px;color:var(--gris)}
-.precio{margin-top:auto;padding-top:10px}
-.precio .p{font-size:26px;font-weight:800;color:var(--texto)}
-.precio .t{font-size:15px;color:var(--verde);font-weight:600}
-.precio .c{font-size:14px;color:var(--gris)}
-.agregar{margin-top:10px;width:100%;background:var(--azul);color:#fff;border:0;border-radius:6px;padding:13px;font-weight:700;font-size:16px}
-.agregar:hover{background:var(--azul2)}
-.vacio{grid-column:1/-1;text-align:center;color:var(--gris);padding:50px 0}
+.barra{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:26px;flex-wrap:wrap;border-bottom:1px solid var(--arena);padding-bottom:18px}
+.barra .cuenta{color:var(--tinta2)}
+.barra label{display:flex;align-items:center;gap:10px;color:var(--tinta2);font-size:15px}
+select{font:inherit;font-size:16px;color:var(--tinta);padding:10px 14px;border:1px solid var(--arena);border-radius:4px;background:#fff}
+.grilla{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 24px}
+.prod{display:flex;flex-direction:column}
+.foto{position:relative;aspect-ratio:4/5;background:var(--lino);border-radius:6px;overflow:hidden;display:grid;place-items:center;cursor:pointer;max-width:100%}
+.foto img{width:100%;height:100%;object-fit:cover}
+.foto svg{width:78%;height:78%;transition:transform .5s ease}
+.prod:hover .foto svg{transform:scale(1.04)}
+.foto .cod{position:absolute;top:12px;left:12px;font-size:12px;letter-spacing:.12em;background:rgba(250,248,244,.9);padding:4px 9px;border-radius:20px;color:var(--tinta2)}
+.info{padding-top:16px;display:flex;flex-direction:column;gap:4px;flex:1}
+.tipo{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta2)}
+.info h3{font-size:28px;cursor:pointer}
+.info h3:hover{color:var(--laton)}
+.puntos{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:6px 0 2px}
+.punto{width:16px;height:16px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.18);display:inline-block;flex-shrink:0}
+.puntos small{font-size:14px;color:var(--tinta2);margin-left:2px}
+.precio{margin-top:auto;padding-top:8px}
+.precio .desde{font-size:13px;color:var(--tinta2);letter-spacing:.06em;min-height:1.2em}
+.precio .p{font-size:22px;font-weight:600;font-variant-numeric:tabular-nums}
+.precio .t{font-size:15px;color:var(--wa)}
+.ver{margin-top:14px;width:100%;border:1px solid var(--tinta);border-radius:40px;padding:12px;font-size:15px;font-weight:500;transition:background .2s,color .2s}
+.ver:hover{background:var(--tinta);color:#fff}
+.vacio{grid-column:1/-1;text-align:center;color:var(--tinta2);padding:60px 0;font-size:18px}
+.vacio a{color:var(--laton);text-decoration:underline}
 
 /* Cómo comprar */
-.como{background:var(--fondo)}
-.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.paso{background:#fff;border:1px solid var(--borde);border-radius:8px;padding:24px}
-.paso .n{width:44px;height:44px;border-radius:50%;background:var(--amarillo);color:#fff;font-weight:800;font-size:20px;display:grid;place-items:center;margin-bottom:12px}
-.paso h3{color:var(--azul);margin-bottom:6px}
-.paso p{color:var(--gris)}
+.como{background:var(--lino)}
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.paso{border-top:1px solid var(--tinta);padding-top:20px}
+.paso .n{font-family:var(--f-titulo);font-size:56px;line-height:1;color:var(--laton);font-weight:500}
+.paso h3{font-size:28px;margin:8px 0}
+.paso p{color:var(--tinta2)}
 
-/* Ayuda */
-.ayuda{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
-details{border-bottom:1px solid var(--borde);padding:16px 0}
-summary{cursor:pointer;font-weight:700;color:var(--azul);font-size:18px}
-details p{color:var(--gris);margin-top:8px}
-.contacto-box{background:var(--azul);color:#fff;border-radius:10px;padding:28px}
-.contacto-box h3{font-size:24px;margin-bottom:8px}
-.contacto-box p{opacity:.9;margin-bottom:18px}
-.contacto-box .linea{display:flex;gap:12px;align-items:center;padding:10px 0;border-top:1px solid rgba(255,255,255,.15);font-size:18px}
-.contacto-box .linea b{color:var(--amarillo);min-width:96px;font-size:15px;text-transform:uppercase}
+/* Ayuda y contacto */
+.ayuda .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:72px;align-items:start}
+.contacto h2{font-size:clamp(34px,4vw,48px);margin-bottom:14px}
+.contacto > p{color:var(--tinta2);margin-bottom:26px;max-width:440px}
+.contacto .acciones{margin-bottom:30px}
+.btn-verde{background:var(--wa);color:#fff}
+.btn-verde:hover{background:#178f47}
+.btn svg{width:20px;height:20px}
+.lineas{list-style:none;border-top:1px solid var(--arena)}
+.lineas li{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--arena)}
+.lineas svg{width:22px;height:22px;stroke:var(--laton);fill:none;stroke-width:1.6;flex-shrink:0;margin-top:3px}
+.lineas small{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tinta2)}
+.lineas span,.lineas a{font-size:18px}
+.faq h3.t{font-size:32px;margin-bottom:10px}
+details{border-bottom:1px solid var(--arena)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 0;font-size:18px;font-weight:500}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--f-titulo);font-size:30px;line-height:1;color:var(--laton);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--tinta2);padding-bottom:20px;max-width:560px}
 
 /* Pie */
-footer{background:#2a211b;color:#c9d1dc;font-size:15px}
-.pie{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;padding:40px 16px}
-.pie h4{color:#fff;margin-bottom:10px;font-size:16px}
-.pie a,.pie p{display:block;margin-bottom:6px}
-.pie a:hover{color:#fff;text-decoration:underline}
-.pagos{display:flex;flex-wrap:wrap;gap:6px}
-.pagos span{background:#fff;color:var(--azul);font-weight:700;font-size:12px;padding:5px 8px;border-radius:4px}
-.legal{border-top:1px solid rgba(255,255,255,.1);padding:16px;text-align:center;font-size:13px}
+footer{background:var(--tinta);color:#cfc5b8;font-size:15px}
+.pie{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-block:56px 40px}
+.pie .logo{align-items:flex-start;margin-bottom:16px;color:#fff}
+.pie .logo small{color:#e3c08a;padding-left:0}
+.pie h4{color:#fff;font-weight:500;font-size:13px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px}
+.pie nav a,.pie nav span{display:block;margin-bottom:8px}
+.pie nav a:hover{color:#fff}
+.legal{border-top:1px solid rgba(255,255,255,.1);padding-block:20px;font-size:13px;text-align:center;color:#a89d90}
 .legal a{text-decoration:underline}
 
-/* WhatsApp */
-.wa{position:fixed;right:18px;bottom:18px;z-index:40;display:flex;align-items:center;gap:8px;background:#25d366;color:#fff;font-weight:700;padding:12px 18px 12px 14px;border-radius:40px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+/* WhatsApp flotante */
+.wa-flot{position:fixed;right:calc(18px + env(safe-area-inset-right, 0px));bottom:calc(18px + env(safe-area-inset-bottom, 0px));z-index:40;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.wa-flot svg{width:30px;height:30px;fill:#fff}
 
-.fondo-osc{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;z-index:90}
+/* Ficha del producto */
+.fondo-osc{position:fixed;inset:0;background:rgba(43,37,32,.55);display:none;z-index:90}
 .fondo-osc.on{display:block}
-.consultar{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
-.consultar a{display:flex;align-items:center;justify-content:center;gap:6px;border-radius:6px;padding:12px 6px;font-weight:700;font-size:15px;text-align:center}
-.c-wa{background:#25d366;color:#fff}
-.c-wa:hover{background:#1ebe5a}
-.c-mail{border:2px solid var(--azul);color:var(--azul)}
-.c-mail:hover{background:var(--azul);color:#fff}
-.consultar svg{width:18px;height:18px;flex-shrink:0}
-.ficha-info .consultar a{padding:15px;font-size:17px}
-.mod{font-size:13px;color:var(--gris);text-transform:uppercase;letter-spacing:.5px}
-.puntos{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin-top:6px}
-.puntos span:last-child{font-size:14px;color:var(--gris);margin-left:4px}
-.punto{width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,.25);display:inline-block;flex-shrink:0}
-.desde{font-size:14px;color:var(--gris)}
-.ver{margin-top:10px;width:100%;background:var(--azul);color:#fff;border:0;border-radius:6px;padding:13px 8px;font-weight:700;font-size:15px}
-.ver:hover{background:var(--azul2)}
-.elige{font-weight:700;color:var(--azul);margin-top:4px}
-.variantes{display:flex;flex-direction:column;gap:6px;max-height:240px;overflow:auto;padding-right:4px}
-.var{display:flex;align-items:center;gap:10px;border:2px solid var(--borde);border-radius:8px;padding:10px 12px;cursor:pointer;font-size:16px}
-.var:has(input:checked){border-color:var(--amarillo);background:#fbf6ec}
-.var input{accent-color:var(--azul);width:18px;height:18px}
-.var .vt{flex:1;line-height:1.25}
-.var small{display:block;color:var(--gris);font-size:13px}
-.var b{white-space:nowrap}
-
-/* Ficha */
 .ficha{position:fixed;inset:0;display:none;place-items:center;z-index:110;padding:16px}
 .ficha.on{display:grid}
-.ficha-box{background:#fff;border-radius:10px;max-width:860px;width:100%;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;max-height:92vh;position:relative}
-.ficha-box .foto{aspect-ratio:auto;min-height:340px;cursor:default;border-bottom:0;border-right:1px solid var(--borde)}
-.ficha-info{padding:56px 26px 26px;overflow:auto;display:flex;flex-direction:column;gap:10px}
-.ficha-info .cat{color:var(--gris);font-size:14px;text-transform:uppercase;letter-spacing:1px}
-.ficha-info h3{font-size:26px;color:var(--azul);line-height:1.2}
-.ficha-info table{border-collapse:collapse;width:100%;font-size:16px}
-.ficha-info td{border:1px solid var(--borde);padding:8px 10px}
-.ficha-info td:first-child{background:var(--fondo);font-weight:600;width:45%}
-.ficha-x{position:absolute;top:10px;right:10px;background:#fff;border:1px solid var(--borde);border-radius:6px;padding:6px 12px;font-weight:700}
+.ficha-box{background:var(--papel);border-radius:8px;max-width:960px;width:100%;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;max-height:92vh;position:relative}
+.ficha-box .foto{aspect-ratio:auto;border-radius:0;cursor:default;min-height:420px}
+.ficha-info{padding:48px 36px 32px;overflow:auto;display:flex;flex-direction:column;gap:10px}
+.ficha-info h3{font-size:46px}
+.ficha-info .det{color:var(--tinta2)}
+.elige{font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-top:10px;color:var(--tinta2)}
+.variantes{display:flex;flex-direction:column;gap:8px;max-height:250px;overflow:auto;padding-right:4px}
+.var{display:flex;align-items:center;gap:12px;border:1px solid var(--arena);border-radius:6px;padding:11px 14px;cursor:pointer;background:#fff;transition:border-color .2s;position:relative}
+.var:hover{border-color:var(--tinta2)}
+.var:has(input:checked){border-color:var(--tinta);box-shadow:inset 0 0 0 1px var(--tinta)}
+.var:has(input:focus-visible){outline:2px solid var(--laton)}
+.var input{position:absolute;opacity:0;pointer-events:none}
+.var .punto{width:22px;height:22px}
+.var .vt{flex:1;line-height:1.3}
+.var small{display:block;color:var(--tinta2);font-size:13px}
+.var b{font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ficha-info .precio .p{font-size:30px}
+.consultar{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.consultar a{display:flex;align-items:center;justify-content:center;gap:8px;border-radius:40px;padding:14px 10px;font-weight:500;text-align:center}
+.consultar svg{width:19px;height:19px;flex-shrink:0}
+.c-wa{background:var(--wa);color:#fff}
+.c-wa:hover{background:#178f47}
+.c-mail{border:1px solid var(--tinta)}
+.c-mail:hover{background:var(--tinta);color:#fff}
+.ficha-x{position:absolute;top:14px;right:14px;z-index:2;width:42px;height:42px;border-radius:50%;background:var(--papel);border:1px solid var(--arena);font-size:24px;line-height:1}
+.ficha-x:hover{background:var(--tinta);color:#fff}
 
-
-@media (max-width:980px){
-  .grilla{grid-template-columns:repeat(3,1fr)}
-  .beneficios .wrap{grid-template-columns:1fr 1fr}
-  .banner .wrap{grid-template-columns:1fr}
+@media (max-width:1050px){
+  .grilla{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cats{grid-template-columns:repeat(3,1fr)}
   .pie{grid-template-columns:1fr 1fr}
 }
-@media (max-width:720px){
-  .cabecera .wrap{flex-wrap:wrap;gap:14px}
-  .buscador{order:3;max-width:none;flex-basis:100%}
-  .acciones{display:none}
-  .grilla{grid-template-columns:1fr 1fr;gap:12px}
-  .pasos,.ayuda{grid-template-columns:1fr}
+@media (max-width:820px){
+  .cab{grid-template-columns:1fr auto;padding-block:12px}
+  .cab .buscador{grid-column:1/-1;grid-row:2;max-width:none}
+  .logo{align-items:flex-start}
+  .logo strong{font-size:32px}
+  .logo small{padding-left:0}
+  .menu .wrap{justify-content:flex-start}
+  .hero .wrap{grid-template-columns:1fr;gap:28px}
+  .hero-arte{order:-1;max-width:380px;margin:0 auto;width:100%}
+  .hero{padding-block:28px 20px}
+  .ayuda .wrap,.pasos{grid-template-columns:1fr;gap:40px}
   .ficha-box{grid-template-columns:1fr}
-  .ficha-box .foto{min-height:240px;border-right:0;border-bottom:1px solid var(--borde)}
-  .banner h1{font-size:30px}
-  .btn-borde{margin:10px 0 0}
+  .ficha-box .foto{min-height:220px;max-height:32vh}
+  .ficha-info{padding:24px 22px}
+  .ficha-info h3{font-size:36px}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .grilla{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px}
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .info h3{font-size:23px}
+  .precio .p{font-size:19px}
+  .tipo{font-size:11px}
+  .ver{font-size:14px;padding:11px 6px}
+  .btn-wa .txt{display:none}
+  .btn-wa{padding:11px}
+  .datos{gap:22px}
+  .datos b{font-size:28px}
+  .seccion{padding-block:48px}
+  .pie{grid-template-columns:1fr}
   .franja .ocultar{display:none}
-  .info{padding:10px}
-  .precio .p{font-size:22px}
-  .info h3{font-size:16px}
-  .wa .txt{display:none}
-  .wa{padding:14px}
 }
-@media (max-width:460px){
-  .beneficios .wrap,.pie{grid-template-columns:1fr}
-}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 
 <div class="franja">
   <div class="wrap">
-    <span>Envíos a todo el país · <b>Consultas por WhatsApp y email</b></span>
-    <span class="ocultar">Atención: <span id="horario"></span> · Tel/WhatsApp: <b id="telTop"></b></span>
+    <span>Envíos a todo el país</span>
+    <span class="ocultar">Consultas por <b>WhatsApp</b> y email</span>
+    <span class="ocultar">Tel: <b id="telTop"></b></span>
   </div>
 </div>
 
-<header class="cabecera">
-  <div class="wrap">
-    <a href="#" class="logo"><strong>Alum<span>bra</span></strong><small>Iluminación</small></a>
-    <form class="buscador" id="formBuscar">
-      <input id="buscar" type="search" placeholder="¿Qué estás buscando? Ej: colgante, velador">
-      <button type="submit">Buscar</button>
+<header>
+  <div class="wrap cab">
+    <form class="buscador" id="formBuscar" role="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="buscar" type="search" placeholder="Buscar modelo, código o color" aria-label="Buscar">
     </form>
-    <div class="acciones">
-      <a class="btn-wa-top" id="waHeader" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    <a href="#" class="logo" aria-label="Alumbra Iluminación, inicio"><strong>Alumbra</strong><small>Iluminación</small></a>
+    <div class="cab-der">
+      <a class="btn-wa" id="waHeader" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg><span class="txt">Consultar</span></a>
     </div>
   </div>
+  <nav class="menu" aria-label="Categorías"><div class="wrap" id="menu"></div></nav>
 </header>
 
-<nav class="menu"><div class="wrap" id="menu"></div></nav>
-
-<section class="banner">
+<section class="hero">
   <div class="wrap">
     <div>
-      <h1>Lámparas para darle vida a cada ambiente de tu casa</h1>
-      <p>Lámparas de escritorio, de mesa, de pie, colgantes y apliques. Diseños para todos los estilos, con asesoramiento personalizado.</p>
-      <a href="#productos" class="btn btn-amarillo">Ver catálogo</a>
-      <a class="btn btn-borde" id="waBanner" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      <span class="eyebrow">Iluminación decorativa</span>
+      <h1>La luz que le da <em>calidez</em> a tu casa</h1>
+      <p>Lámparas de escritorio, de mesa, de pie, colgantes y apliques. Elegí el modelo y la terminación, y consultanos sin compromiso.</p>
+      <div class="acciones">
+        <a href="#productos" class="btn btn-oscuro">Ver el catálogo</a>
+        <a class="btn btn-linea" id="waBanner" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      </div>
+      <div class="datos">
+        <div><b id="nModelos">0</b><span>modelos</span></div>
+        <div><b id="nTerm">0</b><span>terminaciones</span></div>
+        <div><b>5</b><span>categorías</span></div>
+      </div>
     </div>
-    <div class="oferta">
-      <span class="et">ATENCIÓN PERSONALIZADA</span>
-      <h3>Mirá el catálogo y consultanos</h3>
-      <ul>
-        <li>Respondemos por WhatsApp y email</li>
-        <li>Te confirmamos stock y precio al momento</li>
-        <li>Transferencia, Mercado Pago, tarjeta y efectivo</li>
-        <li>Envíos a todo el país o retiro</li>
-      </ul>
+    <div class="hero-arte" aria-hidden="true">
+      <svg viewBox="0 0 520 560">
+        <defs>
+          <linearGradient id="haz" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3d9a4" stop-opacity=".85"/><stop offset="1" stop-color="#f3d9a4" stop-opacity="0"/></linearGradient>
+          <radialGradient id="halo"><stop offset="0" stop-color="#f7e2b5"/><stop offset="1" stop-color="#f7e2b5" stop-opacity="0"/></radialGradient>
+        </defs>
+        <path d="M40 560V250a220 220 0 0 1 440 0v310z" fill="#f1ebe2"/>
+        <circle cx="250" cy="250" r="170" fill="url(#halo)"/>
+        <path d="M250 30v150" stroke="#2b2520" stroke-width="2"/>
+        <path d="M205 236L130 470h240l-75-234z" fill="url(#haz)"/>
+        <path d="M250 180c-48 0-86 34-92 76h184c-6-42-44-76-92-76z" fill="#2b2520"/>
+        <rect x="241" y="172" width="18" height="12" rx="2" fill="#9c6f35"/>
+        <ellipse cx="250" cy="258" rx="26" ry="8" fill="#fbe7bd"/>
+        <path d="M90 470h290" stroke="#2b2520" stroke-width="3"/>
+        <path d="M120 470v90M350 470v90" stroke="#2b2520" stroke-width="3"/>
+        <path d="M200 470c0-26 12-40 22-44h12c10 4 22 18 22 44z" fill="#c9a37a"/>
+        <path d="M216 426c2-12 8-20 15-22" stroke="#5f7d5b" stroke-width="3" fill="none"/>
+        <path d="M232 410c6-8 14-10 20-8" stroke="#5f7d5b" stroke-width="3" fill="none"/>
+        <path d="M444 560V330" stroke="#2b2520" stroke-width="3"/>
+        <path d="M444 330l-38 6" stroke="#2b2520" stroke-width="3"/>
+        <path d="M392 296h52l14 42h-80z" fill="#e6dccb" stroke="#2b2520" stroke-width="2"/>
+        <path d="M424 560l20-30 20 30" stroke="#2b2520" stroke-width="3" fill="none"/>
+      </svg>
     </div>
   </div>
 </section>
 
-<section class="beneficios">
+<section class="seccion" id="categorias" style="padding-top:24px">
   <div class="wrap">
-    <div class="benef"><svg viewBox="0 0 48 48"><path d="M3 12h26v22H3zM29 20h9l7 7v7H29z"/><circle cx="12" cy="36" r="4"/><circle cx="36" cy="36" r="4"/></svg><div><b>Envíos a todo el país</b><span>Despacho en 24/48 hs hábiles</span></div></div>
-    <div class="benef"><svg viewBox="0 0 48 48"><rect x="4" y="10" width="40" height="28" rx="3"/><path d="M4 18h40M10 30h10"/></svg><div><b>Varios medios de pago</b><span>Transferencia, tarjeta y efectivo</span></div></div>
-    <div class="benef"><svg viewBox="0 0 48 48"><path d="M24 4l16 6v12c0 10-7 18-16 22C15 40 8 32 8 22V10z"/><path d="M17 24l5 5 9-10"/></svg><div><b>Garantía</b><span>En todos los artefactos</span></div></div>
-    <div class="benef"><svg viewBox="0 0 48 48"><path d="M8 8h32v24H22l-10 8v-8H8z"/><path d="M16 18h16M16 24h10"/></svg><div><b>Atención personalizada</b><span>Te respondemos rápido</span></div></div>
+    <div class="cabeza"><div><span class="eyebrow">Categorías</span><h2>Encontrá la lámpara para cada lugar</h2></div></div>
+    <div class="cats" id="cats"></div>
   </div>
 </section>
 
-<section class="seccion" id="productos">
+<section class="seccion" id="productos" style="padding-top:24px">
   <div class="wrap">
-    <div class="titulo">
-      <div><h2 id="tituloProd">Todos los productos</h2><p id="cantProd"></p></div>
-      <label id="ordenLabel">Ordenar por:
+    <div class="cabeza"><div><span class="eyebrow" id="eyebrowProd">Catálogo</span><h2 id="tituloProd">Todos los productos</h2></div></div>
+    <div class="barra">
+      <span class="cuenta" id="cantProd"></span>
+      <label id="ordenLabel" for="orden">Ordenar por
         <select id="orden">
           <option value="rel">Destacados</option>
           <option value="asc">Precio: menor a mayor</option>
@@ -268,32 +324,40 @@ footer{background:#2a211b;color:#c9d1dc;font-size:15px}
 
 <section class="seccion como" id="como-comprar">
   <div class="wrap">
-    <div class="titulo"><h2>¿Cómo comprar?</h2></div>
+    <div class="cabeza"><div><span class="eyebrow">Cómo comprar</span><h2>Simple y con atención personal</h2></div></div>
     <div class="pasos">
-      <div class="paso"><div class="n">1</div><h3>Mirá el catálogo</h3><p>Buscá el producto que necesitás por categoría o con el buscador. Tocá la foto para ver la ficha técnica.</p></div>
-      <div class="paso"><div class="n">2</div><h3>Consultanos</h3><p>Tocá "WhatsApp" o "Email" en el producto. El mensaje ya sale con el nombre del producto escrito.</p></div>
-      <div class="paso"><div class="n">3</div><h3>Coordinamos todo</h3><p>Te confirmamos stock y precio, y coordinamos con vos la forma de pago y el envío o retiro.</p></div>
+      <div class="paso"><div class="n">1</div><h3>Elegí tu lámpara</h3><p>Recorré el catálogo por categoría o con el buscador. Tocá un modelo para ver todas sus terminaciones y precios.</p></div>
+      <div class="paso"><div class="n">2</div><h3>Consultanos</h3><p>Elegí la terminación y tocá "WhatsApp" o "Email". El mensaje sale escrito con el modelo y el código.</p></div>
+      <div class="paso"><div class="n">3</div><h3>Coordinamos</h3><p>Te confirmamos stock y precio, y acordamos con vos la forma de pago y el envío o retiro.</p></div>
     </div>
   </div>
 </section>
 
-<section class="seccion" id="ayuda">
-  <div class="wrap ayuda">
-    <div>
-      <div class="titulo"><h2>Preguntas frecuentes</h2></div>
-      <details><summary>¿Las lámparas vienen con la lamparita incluida?</summary><p>No, salvo que se indique en la ficha del producto. En cada ficha te decimos qué rosca usa (por ejemplo E27, la común) para que sepas cuál comprar.</p></details>
-      <details><summary>¿A qué altura conviene colgar un colgante?</summary><p>Sobre una mesa, lo ideal es que quede a unos 70 a 80 cm de la superficie. En pasillos o livings, dejá al menos 2 metros desde el piso.</p></details>
-      <details><summary>¿Cuánto tarda el envío?</summary><p>Despachamos en 24 a 48 hs hábiles. En AMBA llega en 1 a 3 días; al interior, entre 3 y 7 días hábiles según la zona. Las lámparas van bien embaladas.</p></details>
-      <details><summary>¿Puedo ver el producto o retirarlo en persona?</summary><p>Sí, coordinando previamente por WhatsApp podés retirar sin costo.</p></details>
-      <details><summary>¿Tienen garantía?</summary><p>Todos los artefactos tienen garantía contra defectos de fabricación. Si algo falla, nos escribís y lo solucionamos.</p></details>
+<section class="seccion ayuda" id="contacto">
+  <div class="wrap">
+    <div class="contacto">
+      <span class="eyebrow">Contacto</span>
+      <h2>¿Tenés dudas? Te asesoramos</h2>
+      <p>Si no sabés qué modelo o terminación elegir, escribinos o llamanos. Te respondemos personalmente y sin compromiso.</p>
+      <div class="acciones">
+        <a class="btn btn-verde" id="waContactoBtn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>Escribinos por WhatsApp</a>
+        <a class="btn btn-linea" id="mailContactoBtn">Enviar un email</a>
+      </div>
+      <ul class="lineas">
+        <li><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><div><small>WhatsApp y teléfono</small><a id="telContacto"></a></div></li>
+        <li><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><small>Email</small><a id="mailContacto"></a></div></li>
+        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><small>Horario de atención</small><span id="horarioContacto"></span></div></li>
+      </ul>
     </div>
-    <div class="contacto-box" id="contacto">
-      <h3>¿Tenés dudas? Te ayudamos</h3>
-      <p>Si no sabés qué lámpara o artefacto necesitás, escribinos o llamanos y te asesoramos sin compromiso.</p>
-      <div class="linea"><b>WhatsApp</b><a id="waContacto" target="_blank" rel="noopener"></a></div>
-      <div class="linea"><b>Teléfono</b><a id="telContacto"></a></div>
-      <div class="linea"><b>Email</b><a id="mailContacto"></a></div>
-      <div class="linea"><b>Horario</b><span id="horarioContacto"></span></div>
+    <div class="faq">
+      <span class="eyebrow">Ayuda</span>
+      <h3 class="t">Preguntas frecuentes</h3>
+      <details><summary>¿Las lámparas vienen con la lamparita incluida?</summary><p>No. En cada modelo te indicamos el portalámpara (por ejemplo E27, la rosca común, o GU10) para que sepas qué lamparita usar. Si querés, te recomendamos cuál.</p></details>
+      <details><summary>¿Qué significan las terminaciones?</summary><p>Es el color y acabado de la lámpara: microtexturado blanco o negro, dorado mate, níquel satinado, arena, terracota, entre otros. Algunos modelos de mesa y de pie además se ofrecen con pantalla de lino o de arpillera.</p></details>
+      <details><summary>¿A qué altura conviene colgar un colgante?</summary><p>Sobre una mesa, lo ideal es que quede a unos 70 a 80 cm de la superficie. En pasillos o livings, dejá al menos 2 metros desde el piso.</p></details>
+      <details><summary>¿Cuánto tarda el envío?</summary><p>Despachamos en 24 a 48 hs hábiles. En AMBA llega en 1 a 3 días; al interior, entre 3 y 7 días hábiles según la zona. Todo va bien embalado.</p></details>
+      <details><summary>¿Puedo retirar en persona?</summary><p>Sí, coordinando previamente por WhatsApp podés retirar sin costo.</p></details>
+      <details><summary>¿Tienen garantía?</summary><p>Todos los artefactos tienen garantía contra defectos de fabricación. Si algo falla, nos escribís y lo solucionamos.</p></details>
     </div>
   </div>
 </section>
@@ -301,23 +365,20 @@ footer{background:#2a211b;color:#c9d1dc;font-size:15px}
 <footer>
   <div class="wrap pie">
     <div>
-      <a href="#" class="logo" style="margin-bottom:12px"><strong style="color:#fff">Alum<span>bra</span></strong><small style="color:#c9d1dc">Iluminación</small></a>
-      <p>Lámparas y artefactos de iluminación decorativa para el hogar. Envíos a todo el país.</p>
+      <a href="#" class="logo"><strong>Alumbra</strong><small>Iluminación</small></a>
+      <p>Lámparas e iluminación decorativa para el hogar. Envíos a todo el país.</p>
     </div>
-    <div><h4>Categorías</h4><div id="pieCats"></div></div>
-    <div><h4>Ayuda</h4><a href="#como-comprar">Cómo comprar</a><a href="#ayuda">Preguntas frecuentes</a><a href="#contacto">Contacto</a></div>
-    <div><h4>Contacto</h4><a id="waPie" target="_blank" rel="noopener">WhatsApp</a><a id="mailPie">Email</a><p id="horarioPie"></p></div>
+    <div><h4>Categorías</h4><nav id="pieCats"></nav></div>
+    <div><h4>Ayuda</h4><nav><a href="#como-comprar">Cómo comprar</a><a href="#contacto">Preguntas frecuentes</a><a href="#contacto">Contacto</a></nav></div>
+    <div><h4>Contacto</h4><nav><a id="waPie" target="_blank" rel="noopener">WhatsApp</a><a id="mailPie">Email</a><span id="horarioPie"></span></nav></div>
   </div>
-  <div class="legal">© <span id="anio"></span> Alumbra Iluminación · Precios en pesos argentinos, IVA incluido, sujetos a confirmación · <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor" target="_blank" rel="noopener">Defensa del Consumidor</a></div>
+  <div class="legal wrap">© <span id="anio"></span> Alumbra Iluminación · Precios en pesos argentinos, IVA incluido, sujetos a confirmación · <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor" target="_blank" rel="noopener">Defensa del Consumidor</a></div>
 </footer>
 
-<a class="wa" id="waFlot" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>
-  <span class="txt">¿Te ayudamos?</span>
-</a>
+<a class="wa-flot" id="waFlot" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg></a>
 
 <div class="fondo-osc" id="fondo"></div>
-<div class="ficha" id="ficha"><div class="ficha-box" id="fichaBox"></div></div>
+<div class="ficha" id="ficha" role="dialog" aria-modal="true"><div class="ficha-box" id="fichaBox"></div></div>
 
 <script>
 /* =====================================================================
@@ -484,15 +545,6 @@ const PRODUCTOS = [
 ];
 /* PRODUCTOS-FIN */
 
-/* Dibujos genéricos (se usan solo si el producto no tiene foto) */
-const DIBUJOS = {
-  escritorio:`<svg viewBox="0 0 100 100" fill="none" stroke="#8a7f74" stroke-width="2.5" stroke-linecap="round"><path d="M28 88h34" stroke-width="4"/><path d="M45 88V84M45 84L32 52M32 52L58 30"/><circle cx="32" cy="52" r="3" fill="#fff"/><path d="M54 24l16 6-10 18-14-10z" fill="#fff"/><path d="M60 48l8 6" opacity=".5"/></svg>`,
-  mesa:`<svg viewBox="0 0 100 100" fill="none" stroke="#8a7f74" stroke-width="2.5"><path d="M32 18h36l10 30H22z" fill="#fff"/><path d="M50 48v8"/><path d="M40 56c-4 6-4 22 2 30h16c6-8 6-24 2-30z" fill="#f4efe8"/></svg>`,
-  pie:`<svg viewBox="0 0 100 100" fill="none" stroke="#8a7f74" stroke-width="2.5"><path d="M38 8h24l8 20H30z" fill="#fff"/><path d="M50 28v58M50 40L36 92M50 40l14 52M50 40v52"/></svg>`,
-  colgantes:`<svg viewBox="0 0 100 100" fill="none" stroke="#8a7f74" stroke-width="2.5"><path d="M50 4v38"/><path d="M44 42h12v6H44z" fill="#fff"/><path d="M44 48c-16 4-24 18-24 30h60c0-12-8-26-24-30z" fill="#fff"/><path d="M42 78a8 8 0 0 0 16 0" fill="#f4efe8"/></svg>`,
-  apliques:`<svg viewBox="0 0 100 100" fill="none" stroke="#8a7f74" stroke-width="2.5"><rect x="18" y="34" width="10" height="32" rx="2" fill="#fff"/><path d="M28 50h20"/><path d="M48 32h22l10 32H38z" fill="#fff"/></svg>`
-};
-
 /* =====================================================================
    FUNCIONAMIENTO DEL CATÁLOGO (no hace falta tocar)
    ===================================================================== */
@@ -505,26 +557,37 @@ const linkWA = txt => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponen
 const linkMail = (asunto, cuerpo) => `mailto:${CONFIG.email}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
 const sinTildes = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
 const buscarProd = id => PRODUCTOS.find(p => p.id == id);
-const foto = p => FOTOS[p.modelo] ? `<img src="${FOTOS[p.modelo]}" alt="${p.nombre}" loading="lazy">` : (DIBUJOS[p.cat] || DIBUJOS.mesa);
 const conPrecio = p => p.variantes.filter(v => v.p);
 const desde = p => { const ps = conPrecio(p).map(v => v.p); return ps.length ? Math.min(...ps) : null; };
 const variaPrecio = p => new Set(conPrecio(p).map(v => v.p)).size > 1;
 
-/* Colores de muestra para cada terminación */
-const COLORES = [["dorado","#c9a45c"],["niquel","#b8babc"],["cromo","#dfe3e6"],["arena","#d8c7a8"],["gris","#8e8e8e"],["naranja","#e07a2e"],
-  ["terracota","#b5563a"],["verde","#5f7d5b"],["azul","#2c4b7a"],["madera oscura","#5a3d2b"],["madera clara","#c9a37a"],["beige","#e6dccb"],["blanco","#f6f6f3"],["negro","#222"]];
-function muestra(term){
-  const t = sinTildes(term.split("/")[0]);
-  const c = (COLORES.find(([k]) => t.includes(k)) || [,"#ccc"])[1];
-  return `<span class="punto" style="background:${c}" title="${term}"></span>`;
-}
+/* Colores de cada terminación (para las muestras y los dibujos) */
+const COLORES = [["dorado","#c4a062"],["niquel","#b8babc"],["cromo","#d9dde0"],["arena","#d8c7a8"],["gris","#8e8e8e"],["naranja","#e07a2e"],
+  ["terracota","#b5563a"],["verde","#5f7d5b"],["azul","#2c4b7a"],["madera oscura","#5a3d2b"],["madera clara","#c9a37a"],["glossy beige","#e3d3bb"],["beige","#e6dccb"],["blanco","#f7f6f2"],["negro","#2a2724"]];
+const colorDe = term => (COLORES.find(([k]) => sinTildes(term.split("/")[0]).includes(k)) || [,"#b9aea0"])[1];
+const pantallaDe = term => /arpillera/i.test(term) ? "#cbb48f" : "#efe7da";
+const muestra = term => `<span class="punto" style="background:${colorDe(term)}" title="${term}"></span>`;
+
+/* Dibujos de cada tipo de lámpara, pintados con el color de la terminación */
+const L = "#2b2520";
+const DIBUJOS = {
+  escritorio:(c)=>`<svg viewBox="0 0 200 250"><circle cx="128" cy="118" r="62" fill="#f7e2b5" opacity=".55"/><ellipse cx="88" cy="214" rx="42" ry="8" fill="${c}" stroke="${L}" stroke-width="2"/><path d="M88 208L64 132L124 86" fill="none" stroke="${L}" stroke-width="5" stroke-linecap="round"/><path d="M88 208L64 132L124 86" fill="none" stroke="${c}" stroke-width="2.5" stroke-linecap="round"/><circle cx="64" cy="132" r="6" fill="${c}" stroke="${L}" stroke-width="2"/><path d="M114 70l42 18-22 40-36-28z" fill="${c}" stroke="${L}" stroke-width="2" stroke-linejoin="round"/><ellipse cx="146" cy="116" rx="8" ry="4" fill="#fbe7bd" transform="rotate(-30 146 116)"/></svg>`,
+  mesa:(c,t)=>`<svg viewBox="0 0 200 250"><circle cx="100" cy="96" r="70" fill="#f7e2b5" opacity=".5"/><path d="M62 52h76l20 64H42z" fill="${pantallaDe(t)}" stroke="${L}" stroke-width="2" stroke-linejoin="round"/><path d="M100 116v14" stroke="${L}" stroke-width="3"/><path d="M80 130c-10 14-12 52 0 82h40c12-30 10-68 0-82z" fill="${c}" stroke="${L}" stroke-width="2"/><ellipse cx="100" cy="214" rx="26" ry="5" fill="${L}" opacity=".15"/></svg>`,
+  pie:(c,t)=>`<svg viewBox="0 0 200 250"><circle cx="100" cy="56" r="54" fill="#f7e2b5" opacity=".5"/><path d="M72 22h56l16 46H56z" fill="${pantallaDe(t)}" stroke="${L}" stroke-width="2" stroke-linejoin="round"/><path d="M100 68v118" stroke="${L}" stroke-width="5"/><path d="M100 68v118" stroke="${c}" stroke-width="2.5"/><path d="M100 160L70 232M100 160l30 72M100 160v72" stroke="${L}" stroke-width="5" stroke-linecap="round"/><path d="M100 160L70 232M100 160l30 72M100 160v72" stroke="${c}" stroke-width="2.5" stroke-linecap="round"/></svg>`,
+  colgantes:(c)=>`<svg viewBox="0 0 200 250"><path d="M100 0v96" stroke="${L}" stroke-width="2"/><path d="M68 148L40 240h120l-28-92z" fill="#f7e2b5" opacity=".55"/><rect x="92" y="90" width="16" height="12" rx="2" fill="${c}" stroke="${L}" stroke-width="2"/><path d="M100 102c-38 0-66 26-70 50h140c-4-24-32-50-70-50z" fill="${c}" stroke="${L}" stroke-width="2" stroke-linejoin="round"/><ellipse cx="100" cy="153" rx="22" ry="6" fill="#fbe7bd"/></svg>`,
+  apliques:(c)=>`<svg viewBox="0 0 200 250"><circle cx="122" cy="118" r="64" fill="#f7e2b5" opacity=".55"/><rect x="40" y="88" width="20" height="64" rx="4" fill="${c}" stroke="${L}" stroke-width="2"/><path d="M60 120h40" stroke="${L}" stroke-width="5" stroke-linecap="round"/><path d="M60 120h40" stroke="${c}" stroke-width="2.5" stroke-linecap="round"/><rect x="98" y="110" width="14" height="20" rx="2" fill="${c}" stroke="${L}" stroke-width="2"/><circle cx="134" cy="120" r="30" fill="#fbf3e2" stroke="${L}" stroke-width="2"/></svg>`
+};
+const dibujo = (catId, v) => (DIBUJOS[catId] || DIBUJOS.mesa)(colorDe(v ? v.term : "negro"), v ? v.term : "");
+const destacada = p => p.variantes.find(v => /negro/i.test(v.term)) || p.variantes[0];
+const foto = (p, v) => FOTOS[p.modelo] ? `<img src="${FOTOS[p.modelo]}" alt="${p.nombre}" loading="lazy">` : dibujo(p.cat, v || destacada(p));
+
 function puntos(p){
-  const unicos = [...new Map(p.variantes.map(v => [v.term.split("/")[0].trim(), v])).values()];
-  return `<div class="puntos">${unicos.slice(0,8).map(v => muestra(v.term)).join("")}<span>${p.variantes.length} ${p.variantes.length===1?"terminación":"terminaciones"}</span></div>`;
+  const unicos = [...new Map(p.variantes.map(v => [colorDe(v.term), v])).values()];
+  return `<div class="puntos">${unicos.slice(0,9).map(v => muestra(v.term)).join("")}<small>${p.variantes.length} ${p.variantes.length===1?"terminación":"terminaciones"}</small></div>`;
 }
 
 const ICO_WA = `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>`;
-const ICO_MAIL = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>`;
+const ICO_MAIL = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>`;
 
 function mensaje(p, v){
   let t = `Hola, quería consultar por la ${cat(p.cat).singular.toLowerCase()} ${p.nombre} (${p.modelo})`;
@@ -539,7 +602,7 @@ function botonesConsulta(p, v){
   </div>`;
 }
 function bloquePrecio(m, prefijo=""){
-  if (!CONFIG.mostrarPrecios || !m) return `<div class="precio"><div class="p" style="font-size:20px;color:var(--azul)">Consultar precio</div></div>`;
+  if (!CONFIG.mostrarPrecios || !m) return `<div class="precio"><div class="desde">&nbsp;</div><div class="p">Consultar precio</div></div>`;
   const pp = alPublico(m);
   return `<div class="precio"><div class="desde">${prefijo || "&nbsp;"}</div><div class="p">${pesos(pp)}</div>${CONFIG.descuentoTransferencia ? `<div class="t">${pesos(conTransf(pp))} con transferencia</div>` : ""}</div>`;
 }
@@ -547,46 +610,52 @@ function bloquePrecio(m, prefijo=""){
 let categoria = "todos", texto = "", orden = "rel";
 
 function dibujarMenu(){
-  $("#menu").innerHTML = [{id:"todos", nombre:"Todos los productos"}, ...CATEGORIAS].map(c =>
+  $("#menu").innerHTML = [{id:"todos", nombre:"Todo"}, ...CATEGORIAS].map(c =>
     `<button class="${categoria===c.id?"activo":""}" data-cat="${c.id}">${c.nombre}</button>`).join("");
   $("#pieCats").innerHTML = CATEGORIAS.map(c => `<a href="#productos" data-cat="${c.id}">${c.nombre}</a>`).join("");
+}
+function dibujarCategorias(){
+  const ejemplo = {escritorio:"Terracota", mesa:"Microtexturado Negro / Lino", pie:"Madera Oscura / Lino", colgantes:"Dorado Mate", apliques:"Microtexturado Negro"};
+  $("#cats").innerHTML = CATEGORIAS.map(c => {
+    const n = PRODUCTOS.filter(p => p.cat === c.id).length;
+    return `<a href="#productos" class="cat" data-cat="${c.id}">${dibujo(c.id, {term: ejemplo[c.id]})}<b>${c.nombre}</b><span>${n} modelo${n!==1?"s":""}</span></a>`;
+  }).join("");
 }
 
 function dibujarProductos(){
   const q = sinTildes(texto.trim());
   let lista = PRODUCTOS.filter(p => (categoria === "todos" || p.cat === categoria) &&
     sinTildes([p.nombre, p.modelo, cat(p.cat).singular, p.socket, ...p.variantes.map(v => v.term + " " + v.cod)].join(" ")).includes(q));
-  const val = p => desde(p) ?? Infinity;
-  if (orden === "asc")  lista.sort((a,b) => val(a) - val(b));
+  if (orden === "asc")  lista.sort((a,b) => (desde(a) ?? Infinity) - (desde(b) ?? Infinity));
   if (orden === "desc") lista.sort((a,b) => (desde(b) ?? -1) - (desde(a) ?? -1));
   if (orden === "az")   lista.sort((a,b) => a.nombre.localeCompare(b.nombre));
   $("#tituloProd").textContent = q ? `Resultados para "${texto.trim()}"` : (categoria === "todos" ? "Todos los productos" : cat(categoria).nombre);
+  $("#eyebrowProd").textContent = categoria === "todos" ? "Catálogo" : "Lámparas";
   $("#cantProd").textContent = `${lista.length} modelo${lista.length !== 1 ? "s" : ""}`;
   $("#grilla").innerHTML = lista.length ? lista.map(p => `
     <article class="prod">
-      <div class="foto" data-ver="${p.id}">${foto(p)}</div>
+      <div class="foto" data-ver="${p.id}"><span class="cod">${p.modelo}</span>${foto(p)}</div>
       <div class="info">
-        <span class="mod">${cat(p.cat).singular} · ${p.modelo}</span>
+        <span class="tipo">${cat(p.cat).singular} · ${p.socket}</span>
         <h3 data-ver="${p.id}">${p.nombre}</h3>
-        <span class="det">Portalámpara ${p.socket}</span>
         ${puntos(p)}
         ${bloquePrecio(desde(p), variaPrecio(p) ? "Desde" : "")}
-        <button class="ver" data-ver="${p.id}">Ver terminaciones y consultar</button>
+        <button class="ver" data-ver="${p.id}">Ver terminaciones</button>
       </div>
-    </article>`).join("") : `<p class="vacio">No encontramos productos con esa búsqueda.<br>Probá con otra palabra o <a href="${linkWA("Hola, estoy buscando: " + texto)}" target="_blank" style="color:var(--azul);font-weight:700;text-decoration:underline">consultanos por WhatsApp</a>.</p>`;
+    </article>`).join("") : `<p class="vacio">No encontramos productos con esa búsqueda.<br>Probá con otra palabra o <a href="${linkWA("Hola, estoy buscando: " + texto)}" target="_blank" rel="noopener">consultanos por WhatsApp</a>.</p>`;
 }
 
 let fichaProd = null;
 function abrirFicha(id){
   const p = fichaProd = buscarProd(id);
   $("#fichaBox").innerHTML = `
-    <button class="ficha-x" id="cerrarFicha">Cerrar ✕</button>
-    <div class="foto">${foto(p)}</div>
+    <button class="ficha-x" id="cerrarFicha" aria-label="Cerrar">×</button>
+    <div class="foto" id="fichaFoto">${foto(p, p.variantes[0])}</div>
     <div class="ficha-info">
-      <span class="cat">${cat(p.cat).singular} · Modelo ${p.modelo}</span>
+      <span class="eyebrow" style="margin:0">${cat(p.cat).singular} · Modelo ${p.modelo}</span>
       <h3>${p.nombre}</h3>
-      <span class="det">Portalámpara ${p.socket} (lámpara no incluida)</span>
-      <p class="elige">Elegí la terminación:</p>
+      <span class="det">Portalámpara ${p.socket} · lámpara no incluida</span>
+      <p class="elige">Terminación</p>
       <div class="variantes">${p.variantes.map((v,i) => `
         <label class="var">
           <input type="radio" name="variante" value="${i}" ${i===0?"checked":""}>
@@ -598,14 +667,16 @@ function abrirFicha(id){
       <div id="fichaBotones">${botonesConsulta(p, p.variantes[0])}</div>
     </div>`;
   $("#ficha").classList.add("on"); $("#fondo").classList.add("on");
+  document.body.style.overflow = "hidden";
 }
-function cerrarFicha(){ $("#ficha").classList.remove("on"); $("#fondo").classList.remove("on"); }
+function cerrarFicha(){ $("#ficha").classList.remove("on"); $("#fondo").classList.remove("on"); document.body.style.overflow = ""; }
 
 document.addEventListener("change", e => {
   if (e.target.name !== "variante" || !fichaProd) return;
   const v = fichaProd.variantes[+e.target.value];
   $("#fichaPrecio").innerHTML = bloquePrecio(v.p);
   $("#fichaBotones").innerHTML = botonesConsulta(fichaProd, v);
+  if (!FOTOS[fichaProd.modelo]) $("#fichaFoto").innerHTML = foto(fichaProd, v);
 });
 document.addEventListener("click", e => {
   if (e.target.id === "ficha" || e.target.id === "cerrarFicha" || e.target.id === "fondo") return cerrarFicha();
@@ -615,24 +686,24 @@ document.addEventListener("click", e => {
   if (t.dataset.cat){ e.preventDefault(); categoria = t.dataset.cat; texto = ""; $("#buscar").value = ""; dibujarMenu(); dibujarProductos(); $("#productos").scrollIntoView({behavior:"smooth"}); }
 });
 $("#formBuscar").addEventListener("submit", e => { e.preventDefault(); texto = $("#buscar").value; categoria = "todos"; dibujarMenu(); dibujarProductos(); $("#productos").scrollIntoView({behavior:"smooth"}); });
-$("#buscar").addEventListener("input", e => { texto = e.target.value; dibujarProductos(); });
+$("#buscar").addEventListener("input", e => { texto = e.target.value; categoria = "todos"; dibujarMenu(); dibujarProductos(); });
 $("#orden").addEventListener("change", e => { orden = e.target.value; dibujarProductos(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape") cerrarFicha(); });
 if (!CONFIG.mostrarPrecios) $("#ordenLabel").style.display = "none";
 
 /* Datos de contacto en la página */
-$("#horario").textContent = $("#horarioContacto").textContent = $("#horarioPie").textContent = CONFIG.horario;
-$("#telTop").textContent = CONFIG.telefono;
 const waGeneral = linkWA("Hola, tengo una consulta.");
-["#waHeader","#waBanner","#waFlot","#waContacto","#waPie"].forEach(id => $(id).href = waGeneral);
-$("#waContacto").textContent = CONFIG.telefono;
-$("#telContacto").textContent = CONFIG.telefono;
+["#waHeader","#waBanner","#waFlot","#waContactoBtn","#waPie"].forEach(id => $(id).href = waGeneral);
+$("#telTop").textContent = $("#telContacto").textContent = CONFIG.telefono;
 $("#telContacto").href = "tel:" + CONFIG.telefono.replace(/\D/g, "");
 $("#mailContacto").textContent = CONFIG.email;
-$("#mailContacto").href = $("#mailPie").href = linkMail("Consulta desde la web", "Hola, quería consultar por:\n\nMi nombre:\nMi teléfono:");
+$("#mailContacto").href = $("#mailPie").href = $("#mailContactoBtn").href = linkMail("Consulta desde la web", "Hola, quería consultar por:\n\nMi nombre:\nMi teléfono:");
+$("#horarioContacto").textContent = $("#horarioPie").textContent = CONFIG.horario;
 $("#anio").textContent = new Date().getFullYear();
+$("#nModelos").textContent = PRODUCTOS.length;
+$("#nTerm").textContent = PRODUCTOS.reduce((s,p) => s + p.variantes.length, 0);
 
-dibujarMenu(); dibujarProductos();
+dibujarMenu(); dibujarCategorias(); dibujarProductos();
 </script>
 </body>
 </html>
