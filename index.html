@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alumbra Iluminación | Lámparas de mesa, de pie, colgantes y apliques</title>
+<meta name="description" content="Alumbra Iluminación: lámparas de escritorio, de mesa, de pie, colgantes y apliques para decorar tu casa. Envíos a todo el país.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --azul:#3b2f27; --azul2:#5a4637; --amarillo:#c9953f; --rojo:#c62828; --verde:#2e7d32;
+  --texto:#222; --gris:#5f6368; --borde:#e0e0e0; --fondo:#f3f0ea; --blanco:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Open Sans",Arial,sans-serif;font-size:17px;color:var(--texto);background:var(--blanco);line-height:1.5}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+
+/* Franja superior */
+.franja{background:var(--azul);color:#fff;font-size:15px}
+.franja .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.franja b{color:var(--amarillo)}
+
+/* Cabecera */
+.cabecera{border-bottom:1px solid var(--borde);background:#fff}
+.cabecera .wrap{display:flex;align-items:center;gap:24px;padding-top:18px;padding-bottom:18px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo strong{font-size:30px;font-weight:800;color:var(--azul);letter-spacing:-.5px}
+.logo strong span{color:var(--amarillo)}
+.logo small{font-size:12px;color:var(--gris);letter-spacing:3px;text-transform:uppercase;margin-top:4px}
+.buscador{flex:1;display:flex;max-width:560px}
+.buscador input{flex:1;border:2px solid var(--borde);border-right:0;border-radius:6px 0 0 6px;padding:12px 14px;font:inherit}
+.buscador input:focus{outline:none;border-color:var(--azul)}
+.buscador button{background:var(--azul);color:#fff;border:0;padding:0 20px;border-radius:0 6px 6px 0;font-weight:700}
+.acciones{display:flex;gap:10px;margin-left:auto}
+.btn-wa-top{display:flex;white-space:nowrap;align-items:center;gap:10px;background:#25d366;border:0;border-radius:6px;padding:12px 18px;font-weight:700;color:#fff}
+
+/* Menú */
+.menu{background:var(--fondo);border-bottom:1px solid var(--borde)}
+.menu .wrap{display:flex;gap:4px;overflow-x:auto}
+.menu button{background:none;border:0;padding:14px 14px;font-weight:600;color:var(--azul);white-space:nowrap;border-bottom:3px solid transparent}
+.menu button:hover,.menu button.activo{border-bottom-color:var(--amarillo)}
+
+/* Banner */
+.banner{background:linear-gradient(90deg,var(--azul) 0%,var(--azul2) 100%);color:#fff}
+.banner .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center;padding-top:44px;padding-bottom:44px}
+.banner h1{font-size:38px;line-height:1.2;font-weight:800;margin-bottom:14px}
+.banner p{font-size:19px;opacity:.92;margin-bottom:24px}
+.btn{display:inline-block;border:0;border-radius:6px;padding:14px 26px;font-weight:700;font-size:17px}
+.btn-amarillo{background:var(--amarillo);color:#fff}
+.btn-amarillo:hover{background:#d9a54d}
+.btn-borde{border:2px solid #fff;color:#fff;margin-left:8px}
+.oferta{background:#fff;color:var(--texto);border-radius:10px;padding:24px;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.oferta .et{display:inline-block;background:var(--rojo);color:#fff;font-weight:700;font-size:14px;padding:4px 10px;border-radius:4px;margin-bottom:10px}
+.oferta h3{font-size:22px;color:var(--azul);margin-bottom:6px}
+.oferta ul{list-style:none;margin:12px 0;color:var(--gris)}
+.oferta li{padding:4px 0}
+.oferta li::before{content:"✔ ";color:var(--verde);font-weight:700}
+
+/* Beneficios */
+.beneficios{border-bottom:1px solid var(--borde)}
+.beneficios .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding-top:24px;padding-bottom:24px}
+.benef{display:flex;gap:12px;align-items:center}
+.benef svg{flex-shrink:0;width:42px;height:42px;stroke:var(--azul);fill:none;stroke-width:1.6}
+.benef b{display:block;color:var(--azul)}
+.benef span{font-size:15px;color:var(--gris)}
+
+/* Títulos */
+.seccion{padding:44px 0}
+.titulo{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.titulo h2{font-size:28px;color:var(--azul)}
+.titulo p{color:var(--gris)}
+select{font:inherit;padding:10px 12px;border:2px solid var(--borde);border-radius:6px;background:#fff}
+
+/* Productos */
+.grilla{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.prod{border:1px solid var(--borde);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;background:#fff;transition:box-shadow .2s}
+.prod:hover{box-shadow:0 4px 16px rgba(0,0,0,.1)}
+.foto{position:relative;aspect-ratio:1;background:#f7f7f7;display:grid;place-items:center;cursor:pointer;border-bottom:1px solid var(--borde)}
+.foto img{width:100%;height:100%;object-fit:contain;background:#fff}
+.foto svg{width:58%;height:58%}
+.etiqueta{position:absolute;top:10px;left:10px;background:var(--rojo);color:#fff;font-size:13px;font-weight:700;padding:3px 9px;border-radius:4px}
+.etiqueta.azul{background:var(--azul)}
+.info{padding:14px;display:flex;flex-direction:column;gap:4px;flex:1}
+.info h3{font-size:17px;font-weight:600;line-height:1.3;cursor:pointer}
+.info .det{font-size:15px;color:var(--gris)}
+.precio{margin-top:auto;padding-top:10px}
+.precio .p{font-size:26px;font-weight:800;color:var(--texto)}
+.precio .t{font-size:15px;color:var(--verde);font-weight:600}
+.precio .c{font-size:14px;color:var(--gris)}
+.agregar{margin-top:10px;width:100%;background:var(--azul);color:#fff;border:0;border-radius:6px;padding:13px;font-weight:700;font-size:16px}
+.agregar:hover{background:var(--azul2)}
+.vacio{grid-column:1/-1;text-align:center;color:var(--gris);padding:50px 0}
+
+/* Cómo comprar */
+.como{background:var(--fondo)}
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.paso{background:#fff;border:1px solid var(--borde);border-radius:8px;padding:24px}
+.paso .n{width:44px;height:44px;border-radius:50%;background:var(--amarillo);color:#fff;font-weight:800;font-size:20px;display:grid;place-items:center;margin-bottom:12px}
+.paso h3{color:var(--azul);margin-bottom:6px}
+.paso p{color:var(--gris)}
+
+/* Ayuda */
+.ayuda{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+details{border-bottom:1px solid var(--borde);padding:16px 0}
+summary{cursor:pointer;font-weight:700;color:var(--azul);font-size:18px}
+details p{color:var(--gris);margin-top:8px}
+.contacto-box{background:var(--azul);color:#fff;border-radius:10px;padding:28px}
+.contacto-box h3{font-size:24px;margin-bottom:8px}
+.contacto-box p{opacity:.9;margin-bottom:18px}
+.contacto-box .linea{display:flex;gap:12px;align-items:center;padding:10px 0;border-top:1px solid rgba(255,255,255,.15);font-size:18px}
+.contacto-box .linea b{color:var(--amarillo);min-width:96px;font-size:15px;text-transform:uppercase}
+
+/* Pie */
+footer{background:#2a211b;color:#c9d1dc;font-size:15px}
+.pie{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;padding:40px 16px}
+.pie h4{color:#fff;margin-bottom:10px;font-size:16px}
+.pie a,.pie p{display:block;margin-bottom:6px}
+.pie a:hover{color:#fff;text-decoration:underline}
+.pagos{display:flex;flex-wrap:wrap;gap:6px}
+.pagos span{background:#fff;color:var(--azul);font-weight:700;font-size:12px;padding:5px 8px;border-radius:4px}
+.legal{border-top:1px solid rgba(255,255,255,.1);padding:16px;text-align:center;font-size:13px}
+.legal a{text-decoration:underline}
+
+/* WhatsApp */
+.wa{position:fixed;right:18px;bottom:18px;z-index:40;display:flex;align-items:center;gap:8px;background:#25d366;color:#fff;font-weight:700;padding:12px 18px 12px 14px;border-radius:40px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+
+.fondo-osc{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;z-index:90}
+.fondo-osc.on{display:block}
+.consultar{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.consultar a{display:flex;align-items:center;justify-content:center;gap:6px;border-radius:6px;padding:12px 6px;font-weight:700;font-size:15px;text-align:center}
+.c-wa{background:#25d366;color:#fff}
+.c-wa:hover{background:#1ebe5a}
+.c-mail{border:2px solid var(--azul);color:var(--azul)}
+.c-mail:hover{background:var(--azul);color:#fff}
+.consultar svg{width:18px;height:18px;flex-shrink:0}
+.ficha-info .consultar a{padding:15px;font-size:17px}
+.mod{font-size:13px;color:var(--gris);text-transform:uppercase;letter-spacing:.5px}
+.puntos{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin-top:6px}
+.puntos span:last-child{font-size:14px;color:var(--gris);margin-left:4px}
+.punto{width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,.25);display:inline-block;flex-shrink:0}
+.desde{font-size:14px;color:var(--gris)}
+.ver{margin-top:10px;width:100%;background:var(--azul);color:#fff;border:0;border-radius:6px;padding:13px 8px;font-weight:700;font-size:15px}
+.ver:hover{background:var(--azul2)}
+.elige{font-weight:700;color:var(--azul);margin-top:4px}
+.variantes{display:flex;flex-direction:column;gap:6px;max-height:240px;overflow:auto;padding-right:4px}
+.var{display:flex;align-items:center;gap:10px;border:2px solid var(--borde);border-radius:8px;padding:10px 12px;cursor:pointer;font-size:16px}
+.var:has(input:checked){border-color:var(--amarillo);background:#fbf6ec}
+.var input{accent-color:var(--azul);width:18px;height:18px}
+.var .vt{flex:1;line-height:1.25}
+.var small{display:block;color:var(--gris);font-size:13px}
+.var b{white-space:nowrap}
+
+/* Ficha */
+.ficha{position:fixed;inset:0;display:none;place-items:center;z-index:110;padding:16px}
+.ficha.on{display:grid}
+.ficha-box{background:#fff;border-radius:10px;max-width:860px;width:100%;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;max-height:92vh;position:relative}
+.ficha-box .foto{aspect-ratio:auto;min-height:340px;cursor:default;border-bottom:0;border-right:1px solid var(--borde)}
+.ficha-info{padding:56px 26px 26px;overflow:auto;display:flex;flex-direction:column;gap:10px}
+.ficha-info .cat{color:var(--gris);font-size:14px;text-transform:uppercase;letter-spacing:1px}
+.ficha-info h3{font-size:26px;color:var(--azul);line-height:1.2}
+.ficha-info table{border-collapse:collapse;width:100%;font-size:16px}
+.ficha-info td{border:1px solid var(--borde);padding:8px 10px}
+.ficha-info td:first-child{background:var(--fondo);font-weight:600;width:45%}
+.ficha-x{position:absolute;top:10px;right:10px;background:#fff;border:1px solid var(--borde);border-radius:6px;padding:6px 12px;font-weight:700}
+
+
+@media (max-width:980px){
+  .grilla{grid-template-columns:repeat(3,1fr)}
+  .beneficios .wrap{grid-template-columns:1fr 1fr}
+  .banner .wrap{grid-template-columns:1fr}
+  .pie{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .cabecera .wrap{flex-wrap:wrap;gap:14px}
+  .buscador{order:3;max-width:none;flex-basis:100%}
+  .acciones{display:none}
+  .grilla{grid-template-columns:1fr 1fr;gap:12px}
+  .pasos,.ayuda{grid-template-columns:1fr}
+  .ficha-box{grid-template-columns:1fr}
+  .ficha-box .foto{min-height:240px;border-right:0;border-bottom:1px solid var(--borde)}
+  .banner h1{font-size:30px}
+  .btn-borde{margin:10px 0 0}
+  .franja .ocultar{display:none}
+  .info{padding:10px}
+  .precio .p{font-size:22px}
+  .info h3{font-size:16px}
+  .wa .txt{display:none}
+  .wa{padding:14px}
+}
+@media (max-width:460px){
+  .beneficios .wrap,.pie{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="franja">
+  <div class="wrap">
+    <span>Envíos a todo el país · <b>Consultas por WhatsApp y email</b></span>
+    <span class="ocultar">Atención: <span id="horario"></span> · Tel/WhatsApp: <b id="telTop"></b></span>
+  </div>
+</div>
+
+<header class="cabecera">
+  <div class="wrap">
+    <a href="#" class="logo"><strong>Alum<span>bra</span></strong><small>Iluminación</small></a>
+    <form class="buscador" id="formBuscar">
+      <input id="buscar" type="search" placeholder="¿Qué estás buscando? Ej: colgante, velador">
+      <button type="submit">Buscar</button>
+    </form>
+    <div class="acciones">
+      <a class="btn-wa-top" id="waHeader" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<nav class="menu"><div class="wrap" id="menu"></div></nav>
+
+<section class="banner">
+  <div class="wrap">
+    <div>
+      <h1>Lámparas para darle vida a cada ambiente de tu casa</h1>
+      <p>Lámparas de escritorio, de mesa, de pie, colgantes y apliques. Diseños para todos los estilos, con asesoramiento personalizado.</p>
+      <a href="#productos" class="btn btn-amarillo">Ver catálogo</a>
+      <a class="btn btn-borde" id="waBanner" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    </div>
+    <div class="oferta">
+      <span class="et">ATENCIÓN PERSONALIZADA</span>
+      <h3>Mirá el catálogo y consultanos</h3>
+      <ul>
+        <li>Respondemos por WhatsApp y email</li>
+        <li>Te confirmamos stock y precio al momento</li>
+        <li>Transferencia, Mercado Pago, tarjeta y efectivo</li>
+        <li>Envíos a todo el país o retiro</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="beneficios">
+  <div class="wrap">
+    <div class="benef"><svg viewBox="0 0 48 48"><path d="M3 12h26v22H3zM29 20h9l7 7v7H29z"/><circle cx="12" cy="36" r="4"/><circle cx="36" cy="36" r="4"/></svg><div><b>Envíos a todo el país</b><span>Despacho en 24/48 hs hábiles</span></div></div>
+    <div class="benef"><svg viewBox="0 0 48 48"><rect x="4" y="10" width="40" height="28" rx="3"/><path d="M4 18h40M10 30h10"/></svg><div><b>Varios medios de pago</b><span>Transferencia, tarjeta y efectivo</span></div></div>
+    <div class="benef"><svg viewBox="0 0 48 48"><path d="M24 4l16 6v12c0 10-7 18-16 22C15 40 8 32 8 22V10z"/><path d="M17 24l5 5 9-10"/></svg><div><b>Garantía</b><span>En todos los artefactos</span></div></div>
+    <div class="benef"><svg viewBox="0 0 48 48"><path d="M8 8h32v24H22l-10 8v-8H8z"/><path d="M16 18h16M16 24h10"/></svg><div><b>Atención personalizada</b><span>Te respondemos rápido</span></div></div>
+  </div>
+</section>
+
+<section class="seccion" id="productos">
+  <div class="wrap">
+    <div class="titulo">
+      <div><h2 id="tituloProd">Todos los productos</h2><p id="cantProd"></p></div>
+      <label id="ordenLabel">Ordenar por:
+        <select id="orden">
+          <option value="rel">Destacados</option>
+          <option value="asc">Precio: menor a mayor</option>
+          <option value="desc">Precio: mayor a menor</option>
+          <option value="az">Nombre A-Z</option>
+        </select>
+      </label>
+    </div>
+    <div class="grilla" id="grilla"></div>
+  </div>
+</section>
+
+<section class="seccion como" id="como-comprar">
+  <div class="wrap">
+    <div class="titulo"><h2>¿Cómo comprar?</h2></div>
+    <div class="pasos">
+      <div class="paso"><div class="n">1</div><h3>Mirá el catálogo</h3><p>Buscá el producto que necesitás por categoría o con el buscador. Tocá la foto para ver la ficha técnica.</p></div>
+      <div class="paso"><div class="n">2</div><h3>Consultanos</h3><p>Tocá "WhatsApp" o "Email" en el producto. El mensaje ya sale con el nombre del producto escrito.</p></div>
+      <div class="paso"><div class="n">3</div><h3>Coordinamos todo</h3><p>Te confirmamos stock y precio, y coordinamos con vos la forma de pago y el envío o retiro.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="ayuda">
+  <div class="wrap ayuda">
+    <div>
+      <div class="titulo"><h2>Preguntas frecuentes</h2></div>
+      <details><summary>¿Las lámparas vienen con la lamparita incluida?</summary><p>No, salvo que se indique en la ficha del producto. En cada ficha te decimos qué rosca usa (por ejemplo E27, la común) para que sepas cuál comprar.</p></details>
+      <details><summary>¿A qué altura conviene colgar un colgante?</summary><p>Sobre una mesa, lo ideal es que quede a unos 70 a 80 cm de la superficie. En pasillos o livings, dejá al menos 2 metros desde el piso.</p></details>
+      <details><summary>¿Cuánto tarda el envío?</summary><p>Despachamos en 24 a 48 hs hábiles. En AMBA llega en 1 a 3 días; al interior, entre 3 y 7 días hábiles según la zona. Las lámparas van bien embaladas.</p></details>
+      <details><summary>¿Puedo ver el producto o retirarlo en persona?</summary><p>Sí, coordinando previamente por WhatsApp podés retirar sin costo.</p></details>
+      <details><summary>¿Tienen garantía?</summary><p>Todos los artefactos tienen garantía contra defectos de fabricación. Si algo falla, nos escribís y lo solucionamos.</p></details>
+    </div>
+    <div class="contacto-box" id="contacto">
+      <h3>¿Tenés dudas? Te ayudamos</h3>
+      <p>Si no sabés qué lámpara o artefacto necesitás, escribinos o llamanos y te asesoramos sin compromiso.</p>
+      <div class="linea"><b>WhatsApp</b><a id="waContacto" target="_blank" rel="noopener"></a></div>
+      <div class="linea"><b>Teléfono</b><a id="telContacto"></a></div>
+      <div class="linea"><b>Email</b><a id="mailContacto"></a></div>
+      <div class="linea"><b>Horario</b><span id="horarioContacto"></span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap pie">
+    <div>
+      <a href="#" class="logo" style="margin-bottom:12px"><strong style="color:#fff">Alum<span>bra</span></strong><small style="color:#c9d1dc">Iluminación</small></a>
+      <p>Lámparas y artefactos de iluminación decorativa para el hogar. Envíos a todo el país.</p>
+    </div>
+    <div><h4>Categorías</h4><div id="pieCats"></div></div>
+    <div><h4>Ayuda</h4><a href="#como-comprar">Cómo comprar</a><a href="#ayuda">Preguntas frecuentes</a><a href="#contacto">Contacto</a></div>
+    <div><h4>Contacto</h4><a id="waPie" target="_blank" rel="noopener">WhatsApp</a><a id="mailPie">Email</a><p id="horarioPie"></p></div>
+  </div>
+  <div class="legal">© <span id="anio"></span> Alumbra Iluminación · Precios en pesos argentinos, IVA incluido, sujetos a confirmación · <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor" target="_blank" rel="noopener">Defensa del Consumidor</a></div>
+</footer>
+
+<a class="wa" id="waFlot" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>
+  <span class="txt">¿Te ayudamos?</span>
+</a>
+
+<div class="fondo-osc" id="fondo"></div>
+<div class="ficha" id="ficha"><div class="ficha-box" id="fichaBox"></div></div>
+
+<script>
+/* =====================================================================
+   CONFIGURACIÓN — editá estos datos
+   ===================================================================== */
+const CONFIG = {
+  nombre: "Alumbra Iluminación",
+  whatsapp: "5491100000000",       // con código de país, sin + ni espacios
+  telefono: "11 0000-0000",         // como se muestra en la página
+  email: "ventas@alumbra.com.ar",
+  horario: "Lunes a viernes de 9 a 18 hs · Sábados de 9 a 13 hs",
+  mostrarPrecios: true,             // false = oculta los precios y muestra "Consultar precio"
+  recargo: 0,
+  descuentoTransferencia: 0.10,     // 0 = no mostrar precio con transferencia
+  redondeo: 1
+};
+
+/* =====================================================================
+   CATÁLOGO
+   ===================================================================== */
+const CATEGORIAS = [
+  {id:"escritorio", nombre:"De escritorio", singular:"Lámpara de escritorio"},
+  {id:"mesa",       nombre:"De mesa",       singular:"Lámpara de mesa"},
+  {id:"pie",        nombre:"De pie",        singular:"Lámpara de pie"},
+  {id:"colgantes",  nombre:"Colgantes",     singular:"Lámpara colgante"},
+  {id:"apliques",   nombre:"Apliques",      singular:"Aplique de pared"}
+];
+
+const FOTOS = {};
+
+/* PRODUCTOS-INICIO */
+const PRODUCTOS = [
+  {"cat": "escritorio", "nombre": "Draven Flex", "modelo": "LE-2500", "socket": "1x E27", "variantes": [{"cod": "LE-2500-MB", "term": "Microtexturado Blanco", "p": 37800}, {"cod": "LE-2500-MN", "term": "Microtexturado Negro", "p": 37800}, {"cod": "LE-2500-AR", "term": "Arena", "p": 39500}, {"cod": "LE-2500-GR", "term": "Gris", "p": 39500}, {"cod": "LE-2500-NJ", "term": "Naranja", "p": 39500}, {"cod": "LE-2500-TE", "term": "Terracota", "p": 39500}, {"cod": "LE-2500-VD", "term": "Verde", "p": 39500}], "id": 1},
+  {"cat": "escritorio", "nombre": "Bauh-Flex", "modelo": "LE-2501", "socket": "1x GU10", "variantes": [{"cod": "LE-2501-MB", "term": "Microtexturado Blanco", "p": 34800}, {"cod": "LE-2501-MN", "term": "Microtexturado Negro", "p": 34800}, {"cod": "LE-2501-AR", "term": "Arena", "p": 35500}, {"cod": "LE-2501-GR", "term": "Gris", "p": 35500}, {"cod": "LE-2501-NJ", "term": "Naranja", "p": 35500}, {"cod": "LE-2501-TE", "term": "Terracota", "p": 35500}, {"cod": "LE-2501-VD", "term": "Verde", "p": 35500}], "id": 2},
+  {"cat": "escritorio", "nombre": "Bauh", "modelo": "LE-2502", "socket": "1x E27", "variantes": [{"cod": "LE-2502-MB", "term": "Microtexturado Blanco", "p": 37700}, {"cod": "LE-2502-MN", "term": "Microtexturado Negro", "p": 37700}, {"cod": "LE-2502-AR", "term": "Arena", "p": 39000}, {"cod": "LE-2502-GR", "term": "Gris", "p": 39000}, {"cod": "LE-2502-NJ", "term": "Naranja", "p": 39000}, {"cod": "LE-2502-TE", "term": "Terracota", "p": 39000}, {"cod": "LE-2502-VD", "term": "Verde", "p": 39000}, {"cod": "LE-2502-DM", "term": "Dorado Mate", "p": 45000}, {"cod": "LE-2502-NS", "term": "Niquel Satinado", "p": 45000}], "id": 3},
+  {"cat": "escritorio", "nombre": "Dex", "modelo": "LE-2503", "socket": "1x E27", "variantes": [{"cod": "LE-2503-MB", "term": "Microtexturado Blanco", "p": 43800}, {"cod": "LE-2503-MN", "term": "Microtexturado Negro", "p": 43800}], "id": 4},
+  {"cat": "escritorio", "nombre": "Draven-Fix", "modelo": "LE-2504", "socket": "1x E27", "variantes": [{"cod": "LE-2504-MB", "term": "Microtexturado Blanco", "p": 35300}, {"cod": "LE-2504-MN", "term": "Microtexturado Negro", "p": 35300}, {"cod": "LE-2504-AR", "term": "Arena", "p": 37700}, {"cod": "LE-2504-GR", "term": "Gris", "p": 37700}, {"cod": "LE-2504-NJ", "term": "Naranja", "p": 37700}, {"cod": "LE-2504-TE", "term": "Terracota", "p": 37700}, {"cod": "LE-2504-VD", "term": "Verde", "p": 37700}, {"cod": "LE-2504-NS", "term": "Niquel Satinado", "p": 40700}, {"cod": "LE-2504-DM", "term": "Dorado Mate", "p": 40700}], "id": 5},
+  {"cat": "escritorio", "nombre": "Mini-Bend", "modelo": "LE-2505", "socket": "1x GU10", "variantes": [{"cod": "LE-2505-MB", "term": "Microtexturado Blanco", "p": 42700}, {"cod": "LE-2505-MN", "term": "Microtexturado Negro", "p": 42700}, {"cod": "LE-2505-AR", "term": "Arena", "p": 45000}, {"cod": "LE-2505-GR", "term": "Gris", "p": 45000}, {"cod": "LE-2505-NJ", "term": "Naranja", "p": 45000}, {"cod": "LE-2505-TE", "term": "Terracota", "p": 45000}, {"cod": "LE-2505-VD", "term": "Verde", "p": 45000}, {"cod": "LE-2505-NS", "term": "Niquel Satinado", "p": 53500}, {"cod": "LE-2505-DM", "term": "Dorado Mate", "p": 53500}], "id": 6},
+  {"cat": "escritorio", "nombre": "Terra", "modelo": "LE-2506", "socket": "1x GU10", "variantes": [{"cod": "LE-2506-MB", "term": "Microtexturado Blanco", "p": 43800}, {"cod": "LE-2506-MN", "term": "Microtexturado Negro", "p": 43800}], "id": 7},
+  {"cat": "escritorio", "nombre": "Noa-Fix", "modelo": "LE-2507", "socket": "1x GU10", "variantes": [{"cod": "LE-2507-MB", "term": "Microtexturado Blanco", "p": 35300}, {"cod": "LE-2507-MN", "term": "Microtexturado Negro", "p": 35300}], "id": 8},
+  {"cat": "escritorio", "nombre": "Noa-Flex", "modelo": "LN-2508", "socket": "1x GU10", "variantes": [{"cod": "LE-2508-MB", "term": "Microtexturado Blanco", "p": 37300}, {"cod": "LE-2508-MN", "term": "Microtexturado Negro", "p": 37300}], "id": 9},
+  {"cat": "escritorio", "nombre": "Iro", "modelo": "LE-2509", "socket": "1x GU10", "variantes": [{"cod": "LE-2509-MB", "term": "Microtexturado Blanco", "p": 28300}, {"cod": "LE-2509-MN", "term": "Microtexturado Negro", "p": 28300}, {"cod": "LE-2509-NS", "term": "Niquel Satinado", "p": 32500}, {"cod": "LE-2509-DM", "term": "Dorado Mate", "p": 33800}], "id": 10},
+  {"cat": "escritorio", "nombre": "Dex-M", "modelo": "LE-2510", "socket": "1x E27", "variantes": [{"cod": "LE-2510-MB", "term": "Microtexturado Blanco", "p": 36300}, {"cod": "LE-2510-MN", "term": "Microtexturado Negro", "p": 36300}, {"cod": "LE-2510-DM", "term": "Dorado Mate", "p": 43800}], "id": 11},
+  {"cat": "escritorio", "nombre": "Eos", "modelo": "LE-2511", "socket": "1x E27", "variantes": [{"cod": "LE-2511-MB", "term": "Microtexturado Blanco", "p": 45000}, {"cod": "LE-2511-MN", "term": "Microtexturado Negro", "p": 45000}, {"cod": "LE-2511-DM", "term": "Dorado Mate", "p": 52500}], "id": 12},
+  {"cat": "escritorio", "nombre": "Hans", "modelo": "LE-2512", "socket": "1x E27", "variantes": [{"cod": "LE-2512-MB", "term": "Microtexturado Blanco", "p": 42500}, {"cod": "LE-2512-MN", "term": "Microtexturado Negro", "p": 42500}, {"cod": "LE-2512-TE", "term": "Terracota", "p": 45000}], "id": 13},
+  {"cat": "escritorio", "nombre": "Bend", "modelo": "LE-2513", "socket": "1x E27", "variantes": [{"cod": "LE-2513-MB", "term": "Microtexturado Blanco", "p": 47500}, {"cod": "LE-2513-MN", "term": "Microtexturado Negro", "p": 47500}, {"cod": "LE-2513-AR", "term": "Arena", "p": 50700}, {"cod": "LE-2513-TE", "term": "Terracota", "p": 50700}, {"cod": "LE-2513-VD", "term": "Verde", "p": 50700}], "id": 14},
+  {"cat": "escritorio", "nombre": "Mova", "modelo": "LE-2514", "socket": "1x E27", "variantes": [{"cod": "LE-2514-MB", "term": "Microtexturado Blanco", "p": 51300}, {"cod": "LE-2514-MN", "term": "Microtexturado Negro", "p": 51300}, {"cod": "LE-2514-AR", "term": "Arena", "p": 52500}, {"cod": "LE-2514-GR", "term": "Gris", "p": 52500}, {"cod": "LE-2514-TE", "term": "Terracota", "p": 52500}, {"cod": "LE-2514-VD", "term": "Verde", "p": 52500}, {"cod": "LE-2514-NS", "term": "Niquel Satinado", "p": 55000}], "id": 15},
+  {"cat": "escritorio", "nombre": "Task", "modelo": "LE-2515", "socket": "1x E27", "variantes": [{"cod": "LE-2515-MN", "term": "Microtexturado Negro", "p": 65000}], "id": 16},
+  {"cat": "escritorio", "nombre": "Gio", "modelo": "LE-2516", "socket": "1x GU10", "variantes": [{"cod": "LE-2516-MB", "term": "Microtexturado Blanco", "p": 38200}, {"cod": "LE-2516-MN", "term": "Microtexturado Negro", "p": 38200}], "id": 17},
+  {"cat": "escritorio", "nombre": "Bois", "modelo": "LE-2517", "socket": "1x E27", "variantes": [{"cod": "LE-2517-MB", "term": "Microtexturado Blanco", "p": 40700}, {"cod": "LE-2517-MN", "term": "Microtexturado Negro", "p": 40700}], "id": 18},
+  {"cat": "escritorio", "nombre": "Bosko", "modelo": "LE-2518", "socket": "1x E27", "variantes": [{"cod": "LE-2518-MB", "term": "Microtexturado Blanco", "p": 42500}, {"cod": "LE-2518-MN", "term": "Microtexturado Negro", "p": 42500}], "id": 19},
+  {"cat": "escritorio", "nombre": "Mini - Bauh", "modelo": "LE-2519", "socket": "1x GU10", "variantes": [{"cod": "LE-2519-MB", "term": "Microtexturado Blanco", "p": 31900}, {"cod": "LE-2519-MN", "term": "Microtexturado Negro", "p": 31900}, {"cod": "LE-2519-AR", "term": "Arena", "p": 35700}, {"cod": "LE-2519-GR", "term": "Gris", "p": 35700}, {"cod": "LE-2519-NJ", "term": "Naranja", "p": 35700}, {"cod": "LE-2519-TE", "term": "Terracota", "p": 35700}, {"cod": "LE-2519-VD", "term": "Verde", "p": 35700}, {"cod": "LE-2519-NS", "term": "Niquel Satinado", "p": 39400}], "id": 20},
+  {"cat": "escritorio", "nombre": "Evah", "modelo": "LE-2520", "socket": "1x GU10", "variantes": [{"cod": "LE-2520-MB", "term": "Microtexturado Blanco", "p": 41500}, {"cod": "LE-2520-MN", "term": "Microtexturado Negro", "p": 41500}], "id": 21},
+  {"cat": "escritorio", "nombre": "Néa", "modelo": "LE-2521", "socket": "1x E27", "variantes": [{"cod": "LE-2521-MB", "term": "Microtexturado Blanco", "p": 55700}, {"cod": "LE-2521-MN", "term": "Microtexturado Negro", "p": 55700}], "id": 22},
+  {"cat": "escritorio", "nombre": "Nohrd-Doble", "modelo": "LE-2000", "socket": "1x GU10", "variantes": [{"cod": "LE-2000-BE", "term": "Beige Marfil", "p": 64700}, {"cod": "LE-2000-NG", "term": "Negro Grafito", "p": 64700}, {"cod": "LE-2000-NS", "term": "Niquel Satinado", "p": 72200}], "id": 23},
+  {"cat": "escritorio", "nombre": "Draft", "modelo": "LE-2001", "socket": "1x E27", "variantes": [{"cod": "LE-2001-BE", "term": "Beige Marfil", "p": 74900}, {"cod": "LE-2001-NM", "term": "Negro Mate", "p": 74900}, {"cod": "LE-2001-NS", "term": "Niquel Satinado", "p": 89400}], "id": 24},
+  {"cat": "escritorio", "nombre": "Halo-Atril", "modelo": "LE-2002", "socket": "1x E27", "variantes": [{"cod": "LE-2002-BE", "term": "Beige Marfil", "p": 52000}, {"cod": "LE-2002-NG", "term": "Negro Grafito", "p": 52000}], "id": 25},
+  {"cat": "escritorio", "nombre": "Halo-Doble", "modelo": "LE-2003", "socket": "1x GU10", "variantes": [{"cod": "LE-2003-BM", "term": "Blanco Mate", "p": 62700}, {"cod": "LE-2003-NM", "term": "Negro Mate", "p": 62700}, {"cod": "LE-2003-NS", "term": "Niquel Satinado", "p": 75700}], "id": 26},
+  {"cat": "escritorio", "nombre": "Halo-Mastil", "modelo": "LE-2004", "socket": "1x GU10", "variantes": [{"cod": "LE-2004-BM", "term": "Blanco Mate", "p": 53200}, {"cod": "LE-2004-GM", "term": "Gris Mate", "p": 53200}, {"cod": "LE-2004-NM", "term": "Negro Mate", "p": 53200}], "id": 27},
+  {"cat": "escritorio", "nombre": "Halo-Tablero", "modelo": "LE-2005", "socket": "1x GU10", "variantes": [{"cod": "LE-2005-BM", "term": "Blanco Mate", "p": 61900}, {"cod": "LE-2005-NM", "term": "Negro Mate", "p": 61900}, {"cod": "LE-2005-NS", "term": "Niquel Satinado", "p": 73400}], "id": 28},
+  {"cat": "escritorio", "nombre": "Kiva-Escritorio", "modelo": "LE-2006", "socket": "1x E27", "variantes": [{"cod": "LE-2006-BE", "term": "Beige Marfil", "p": 36500}, {"cod": "LE-2006-NG", "term": "Negro Grafito", "p": 36500}], "id": 29},
+  {"cat": "escritorio", "nombre": "Zafir-Escritorio", "modelo": "LE-2007", "socket": "1x E14", "variantes": [{"cod": "LE-2007-BE", "term": "Beige Marfil", "p": 64000}, {"cod": "LE-2007-DM", "term": "Dorado Mate", "p": 75300}, {"cod": "LE-2007-MN", "term": "Microtexturado Negro", "p": 64000}, {"cod": "LE-2007-NS", "term": "Niquel Satinado", "p": 75300}], "id": 30},
+  {"cat": "escritorio", "nombre": "Spyn", "modelo": "LE-2008", "socket": "1x GU10", "variantes": [{"cod": "LE-2008-BM", "term": "Blanco Mate", "p": 36500}, {"cod": "LE-2008-DM", "term": "Dorado Mate", "p": 38200}, {"cod": "LE-2008-NM", "term": "Negro Mate", "p": 36500}], "id": 31},
+  {"cat": "escritorio", "nombre": "Goos", "modelo": "LE-2009", "socket": "1x GU10", "variantes": [{"cod": "LE-2009-AZ", "term": "Azul Zafiro", "p": 40500}, {"cod": "LE-2009-BE", "term": "Beige Marfil", "p": 35900}, {"cod": "LE-2009-DM", "term": "Dorado Mate", "p": 40500}, {"cod": "LE-2009-NG", "term": "Negro Grafito", "p": 35900}], "id": 32},
+  {"cat": "escritorio", "nombre": "Goos-Clip", "modelo": "LE-2010", "socket": "1x GU10", "variantes": [{"cod": "LE-2010-BE", "term": "Beige Marfil", "p": 22300}, {"cod": "LE-2010-NM", "term": "Negro Mate", "p": 22300}], "id": 33},
+  {"cat": "escritorio", "nombre": "Goos-Tablero", "modelo": "LE-2011", "socket": "1x GU10", "variantes": [{"cod": "LE-2011-BE", "term": "Beige Marfil", "p": 35400}, {"cod": "LE-2011-NM", "term": "Negro Mate", "p": 35400}], "id": 34},
+  {"cat": "escritorio", "nombre": "Nodo", "modelo": "LE-2012", "socket": "1x E27", "variantes": [{"cod": "LE-2012-BE", "term": "Beige Marfil", "p": 86000}, {"cod": "LE-2012-DM", "term": "Dorado Mate", "p": 91400}, {"cod": "LE-2012-NM", "term": "Negro Mate", "p": 86000}], "id": 35},
+  {"cat": "escritorio", "nombre": "Stik", "modelo": "LE-2013", "socket": "1x E14", "variantes": [{"cod": "LE-2013-MN", "term": "Microtexturado Negro", "p": 49400}, {"cod": "LE-2013-MB", "term": "Microtexturado Blanco", "p": 49400}], "id": 36},
+  {"cat": "escritorio", "nombre": "Nohrd-Mastil", "modelo": "LE-2014", "socket": "1x GU10", "variantes": [{"cod": "LE-2014-MN", "term": "Microtexturado Negro", "p": 64500}, {"cod": "LE-2014-MB", "term": "Microtexturado Blanco", "p": 64500}], "id": 37},
+  {"cat": "escritorio", "nombre": "Mini-Bend", "modelo": "LE-2015", "socket": "1x GU10", "variantes": [{"cod": "LE-2015-MN", "term": "Microtexturado Negro", "p": 42700}, {"cod": "LE-2015-MB", "term": "Microtexturado Blanco", "p": 42700}, {"cod": "LE-2015-DM", "term": "Dorado Mate", "p": 53500}], "id": 38},
+  {"cat": "escritorio", "nombre": "Gyros", "modelo": "LE-2016", "socket": "1x E27", "variantes": [{"cod": "LE-2016-MN", "term": "Microtexturado Negro", "p": 56200}, {"cod": "LE-2016-MB", "term": "Microtexturado Blanco", "p": 56200}, {"cod": "LE-2016-DM", "term": "Dorado Mate", "p": 74400}], "id": 39},
+  {"cat": "escritorio", "nombre": "Luxe", "modelo": "LE-2017", "socket": "1x GU10", "variantes": [{"cod": "LE-2017-ND", "term": "Negro/dorado", "p": 100300}, {"cod": "LE-2017-BD", "term": "Blanco/dorado", "p": 100300}], "id": 40},
+  {"cat": "mesa", "nombre": "Holy", "modelo": "LM-3500", "socket": "2x G9", "variantes": [{"cod": "LM-3500-MB", "term": "Microtexturado Blanco", "p": 69800}, {"cod": "LM-3500-MN", "term": "Microtexturado Negro", "p": 69800}, {"cod": "LM-3500-NJ", "term": "Naranja", "p": 73200}], "id": 41},
+  {"cat": "mesa", "nombre": "Panton", "modelo": "LM-3501", "socket": "2x E27", "variantes": [{"cod": "LM-3501-MB", "term": "Microtexturado Blanco", "p": 86500}, {"cod": "LM-3501-MN", "term": "Microtexturado Negro", "p": 86500}, {"cod": "LM-3501-NJ", "term": "Naranja", "p": 96500}], "id": 42},
+  {"cat": "mesa", "nombre": "Kaia", "modelo": "LM-3502", "socket": "1x E27", "variantes": [{"cod": "LM-3502-MB", "term": "Microtexturado Blanco", "p": 45000}, {"cod": "LM-3502-MN", "term": "Microtexturado Negro", "p": 45000}], "id": 43},
+  {"cat": "mesa", "nombre": "Raiz", "modelo": "LM-3503", "socket": "1x E27", "variantes": [{"cod": "LM-3503-MN/L", "term": "Microtexturado Negro / Lino", "p": 71000}, {"cod": "LM-3503-MN/A", "term": "Microtexturado Negro / Arpillera", "p": 73800}, {"cod": "LM-3503-DM/L", "term": "Dorado Mate / Lino", "p": 74000}, {"cod": "LM-3503-DM/A", "term": "Dorado Mate / Arpillera", "p": 76000}], "id": 44},
+  {"cat": "mesa", "nombre": "Fos", "modelo": "LM-3504", "socket": "1x E27", "variantes": [{"cod": "LM-3504-MB", "term": "Microtexturado Blanco", "p": 47800}, {"cod": "LM-3504-MN", "term": "Microtexturado Negro", "p": 47800}], "id": 45},
+  {"cat": "mesa", "nombre": "Zia", "modelo": "LM-3505", "socket": "1x E27", "variantes": [{"cod": "LM-3505-MN", "term": "Microtexturado Negro", "p": null}], "id": 46},
+  {"cat": "mesa", "nombre": "Sava", "modelo": "LM-3506", "socket": "1x E27", "variantes": [{"cod": "LM-3506-MN/L", "term": "Microtexturado Negro / Lino", "p": 75300}, {"cod": "LM-3506-MN/A", "term": "Microtexturado Negro / Arpillera", "p": 78800}, {"cod": "LM-3506-DM/L", "term": "Dorado Mate / Lino", "p": 78500}, {"cod": "LM-3506-DM/A", "term": "Dorado Mate / Arpillera", "p": 82000}], "id": 47},
+  {"cat": "mesa", "nombre": "Pampa", "modelo": "LM-3507", "socket": "1x E27", "variantes": [{"cod": "LM-3507-MN/L", "term": "Microtexturado Negro / Lino", "p": 51800}, {"cod": "LM-3507-MN/A", "term": "Microtexturado Negro / Arpillera", "p": 54800}, {"cod": "LM-3507-DM/L", "term": "Dorado Mate / Lino", "p": 55000}, {"cod": "LM-3507-DM/A", "term": "Dorado Mate / Arpillera", "p": 57800}], "id": 48},
+  {"cat": "mesa", "nombre": "Lyra-T", "modelo": "LM-3508", "socket": "1x E27", "variantes": [{"cod": "LM-3508-MO", "term": "Madera Oscura", "p": 53800}, {"cod": "LM-3508-MC", "term": "Madera Clara", "p": 53800}], "id": 49},
+  {"cat": "mesa", "nombre": "Lyra-C", "modelo": "LM-3508", "socket": "1x E27", "variantes": [{"cod": "LM-3508-MO", "term": "Madera Oscura", "p": 56300}, {"cod": "LM-3508-MC", "term": "Madera Clara", "p": 56300}], "id": 50},
+  {"cat": "mesa", "nombre": "Tao", "modelo": "LM-3509", "socket": "1x E27", "variantes": [{"cod": "LM-3509-MB", "term": "Microtexturado Blanco", "p": 42800}, {"cod": "LM-3509-MN", "term": "Microtexturado Negro", "p": 42800}], "id": 51},
+  {"cat": "mesa", "nombre": "Lussa", "modelo": "LM-3510", "socket": "1x E27", "variantes": [{"cod": "LM-3510-MB", "term": "Microtexturado Blanco", "p": 31900}, {"cod": "LM-3510-MN", "term": "Microtexturado Negro", "p": 31900}], "id": 52},
+  {"cat": "mesa", "nombre": "Teya", "modelo": "LM-3511", "socket": "1x E27", "variantes": [{"cod": "LM-3511-MB", "term": "Microtexturado Blanco", "p": 72800}, {"cod": "LM-3511-MN", "term": "Microtexturado Negro", "p": 72800}], "id": 53},
+  {"cat": "mesa", "nombre": "Oz", "modelo": "LM-3512", "socket": "1x E27", "variantes": [{"cod": "LM-3512-MB", "term": "Microtexturado Blanco", "p": 37700}, {"cod": "LM-3512-MN", "term": "Microtexturado Negro", "p": 37700}], "id": 54},
+  {"cat": "mesa", "nombre": "Wilo", "modelo": "LM-3513", "socket": "1x E27", "variantes": [{"cod": "LM-3513-MB/L", "term": "Microtexturado Blanco / Lino", "p": 28200}, {"cod": "LM-3513-MB/A", "term": "Microtexturado Blanco / Arpillera", "p": 30000}, {"cod": "LM-3513-MN/L", "term": "Microtexturado Negro / Lino", "p": 28200}, {"cod": "LM-3513-MN/A", "term": "Microtexturado Negro / Arpillera", "p": 30000}], "id": 55},
+  {"cat": "mesa", "nombre": "Tronko", "modelo": "LM-3514", "socket": "1x E27", "variantes": [{"cod": "LM-3514-MB", "term": "Microtexturado Blanco", "p": 28800}, {"cod": "LM-3514-MN", "term": "Microtexturado Negro", "p": 28800}], "id": 56},
+  {"cat": "mesa", "nombre": "Caps", "modelo": "LM-3515", "socket": "2x G9", "variantes": [{"cod": "LM-3515-MB", "term": "Microtexturado Blanco", "p": null}, {"cod": "LM-3515-MN", "term": "Microtexturado Negro", "p": null}], "id": 57},
+  {"cat": "mesa", "nombre": "Mora", "modelo": "LM-3516", "socket": "1x E27", "variantes": [{"cod": "LM-3516-MB", "term": "Microtexturado Blanco", "p": 34400}, {"cod": "LM-3516-MN", "term": "Microtexturado Negro", "p": 34400}], "id": 58},
+  {"cat": "mesa", "nombre": "Muna", "modelo": "LM-3517", "socket": "1x E27", "variantes": [{"cod": "LM-3517-DM", "term": "Dorado Mate", "p": 43800}], "id": 59},
+  {"cat": "mesa", "nombre": "Elisse", "modelo": "LM-3518", "socket": "2x E27", "variantes": [{"cod": "LM-3518-MB", "term": "Microtexturado Blanco", "p": 93000}, {"cod": "LM-3518-MN", "term": "Microtexturado Negro", "p": 93000}], "id": 60},
+  {"cat": "mesa", "nombre": "Mini-Muna", "modelo": "LM-3519", "socket": "1x E27", "variantes": [{"cod": "LM-3519-MB", "term": "Microtexturado Blanco", "p": 34400}, {"cod": "LM-3519-MN", "term": "Microtexturado Negro", "p": 34400}], "id": 61},
+  {"cat": "mesa", "nombre": "Tyna", "modelo": "LM-3520", "socket": "1x E27", "variantes": [{"cod": "LM-3520-MB", "term": "Microtexturado Blanco", "p": 74300}, {"cod": "LM-3520-MN", "term": "Microtexturado Negro", "p": 74300}], "id": 62},
+  {"cat": "mesa", "nombre": "Ycro", "modelo": "LM-3521", "socket": "1x E27", "variantes": [{"cod": "LM-3521-MB", "term": "Microtexturado Blanco", "p": 40000}, {"cod": "LM-3521-MN", "term": "Microtexturado Negro", "p": 40000}, {"cod": "LM-3521-NS", "term": "Niquel Satinado", "p": 43800}, {"cod": "LM-3521-CR", "term": "Cromo", "p": 43800}], "id": 63},
+  {"cat": "mesa", "nombre": "Trip", "modelo": "LM-3522", "socket": "1x E27", "variantes": [{"cod": "LM-3522-MN", "term": "Microtexturado Negro", "p": 52500}, {"cod": "LM-3522-NS", "term": "Niquel Satinado", "p": 52500}], "id": 64},
+  {"cat": "mesa", "nombre": "Doul", "modelo": "LM-3523", "socket": "1x E27", "variantes": [{"cod": "LM-3523-MB", "term": "Microtexturado Blanco", "p": 17800}, {"cod": "LM-3523-MN", "term": "Microtexturado Negro", "p": 17800}, {"cod": "LM-3523-DM", "term": "Dorado Mate", "p": 19400}, {"cod": "LM-3523-NS", "term": "Niquel Satinado", "p": 19400}], "id": 65},
+  {"cat": "mesa", "nombre": "Seta", "modelo": "LM-3000", "socket": "1x E27", "variantes": [{"cod": "LM-3000-NG", "term": "Negro Grafito", "p": 68500}, {"cod": "LM-3000-GM", "term": "Gris Mate", "p": 68500}, {"cod": "LM-3000-GB", "term": "Glossy Beige", "p": 71700}], "id": 66},
+  {"cat": "mesa", "nombre": "Cupra", "modelo": "LM-3001", "socket": "2x E27", "variantes": [{"cod": "LM-3001-BE", "term": "Beige Marfil", "p": 95700}, {"cod": "LM-3001-DM", "term": "Dorado Mate", "p": 110800}, {"cod": "LM-3001-NM", "term": "Negro Mate", "p": 95700}, {"cod": "LM-3001-NS", "term": "Niquel Satinado", "p": 110800}], "id": 67},
+  {"cat": "mesa", "nombre": "Perle", "modelo": "LM-3002", "socket": "1x E27", "variantes": [{"cod": "LM-3002-BE", "term": "Beige Marfil", "p": 53800}, {"cod": "LM-3002-NG", "term": "Negro Grafito", "p": 53800}], "id": 68},
+  {"cat": "mesa", "nombre": "Konik", "modelo": "LM-3003", "socket": "1x E27", "variantes": [{"cod": "LM-3003-BE", "term": "Beige Marfil", "p": 59900}, {"cod": "LM-3003-NG", "term": "Negro Grafito", "p": 59900}], "id": 69},
+  {"cat": "mesa", "nombre": "Nuit", "modelo": "LM-3004", "socket": "1x E27", "variantes": [{"cod": "LM-3004-BE", "term": "Beige Marfil", "p": 95000}, {"cod": "LM-3004-NG", "term": "Negro Grafito", "p": 95000}], "id": 70},
+  {"cat": "mesa", "nombre": "Sylo", "modelo": "LM-3005", "socket": "1x E27", "variantes": [{"cod": "LM-3005-BM", "term": "Blanco Mate", "p": 72500}, {"cod": "LM-3005-NM", "term": "Negro Mate", "p": 72500}], "id": 71},
+  {"cat": "mesa", "nombre": "Bolet de Mesa", "modelo": "LM-3006", "socket": "1x E27", "variantes": [{"cod": "LM-3006-BM", "term": "Blanco Mate", "p": 72500}, {"cod": "LM-3006-NM", "term": "Negro Mate", "p": 72500}], "id": 72},
+  {"cat": "pie", "nombre": "Tork", "modelo": "LP-4500", "socket": "1x E27", "variantes": [{"cod": "LP-4500-MB", "term": "Microtexturado Blanco", "p": 74400}, {"cod": "LP-4500-MN", "term": "Microtexturado Negro", "p": 74400}, {"cod": "LP-4500-AR", "term": "Arena", "p": 74400}, {"cod": "LP-4500-TE", "term": "Terracota", "p": 74400}, {"cod": "LP-4500-VD", "term": "Verde", "p": 74400}], "id": 73},
+  {"cat": "pie", "nombre": "Lyra de Pie", "modelo": "LP-4501", "socket": "1x E27", "variantes": [{"cod": "LP-4501-MO/L", "term": "Madera Oscura / Lino", "p": 131300}, {"cod": "LP-4501-MO/A", "term": "Madera Oscura / Arpillera", "p": 131300}], "id": 74},
+  {"cat": "pie", "nombre": "Corteza", "modelo": "LP-4502", "socket": "1x E27", "variantes": [{"cod": "LP-4502-MO/L", "term": "Madera Oscura / Lino", "p": 618800}, {"cod": "LP-4502-MO/A", "term": "Madera Oscura / Arpillera", "p": 618800}], "id": 75},
+  {"cat": "pie", "nombre": "Kaia de Pie", "modelo": "LP-4503", "socket": "1x E27", "variantes": [{"cod": "LP-4503-MB/L", "term": "Microtexturado Blanco / Lino", "p": 83300}, {"cod": "LP-4503-MB/A", "term": "Microtexturado Blanco / Arpillera", "p": 85300}, {"cod": "LP-4503-MN/L", "term": "Microtexturado Negro / Lino", "p": 83300}, {"cod": "LP-4503-MN/A", "term": "Microtexturado Negro / Arpillera", "p": 85300}], "id": 76},
+  {"cat": "pie", "nombre": "Wilo de Pie", "modelo": "LP-4504", "socket": "1x E27", "variantes": [{"cod": "LP-4504-MB/L", "term": "Microtexturado Blanco / Lino", "p": 93500}, {"cod": "LP-4504-MB/A", "term": "Microtexturado Blanco / Arpillera", "p": 96500}, {"cod": "LP-4504-MN/L", "term": "Microtexturado Negro / Lino", "p": 93500}, {"cod": "LP-4504-MN/A", "term": "Microtexturado Negro / Arpillera", "p": 96500}], "id": 77},
+  {"cat": "pie", "nombre": "Fos de Pie", "modelo": "LP-4505", "socket": "1x E27", "variantes": [{"cod": "LP-4505-MB/L", "term": "Microtexturado Blanco / Lino", "p": 113200}, {"cod": "LP-4505-MB/A", "term": "Microtexturado Blanco / Arpillera", "p": 113200}, {"cod": "LP-4505-MN/L", "term": "Microtexturado Negro / Lino", "p": 113200}, {"cod": "LP-4505-MN/A", "term": "Microtexturado Negro / Arpillera", "p": 113200}], "id": 78},
+  {"cat": "pie", "nombre": "Draven de Pie", "modelo": "LP-4506", "socket": "3x E27", "variantes": [{"cod": "LP-4506-MB", "term": "Microtexturado Blanco", "p": 127500}, {"cod": "LP-4506-MN", "term": "Microtexturado Negro", "p": 127500}, {"cod": "LP-4506-AR", "term": "Arena", "p": 127500}], "id": 79},
+  {"cat": "pie", "nombre": "Odi", "modelo": "LP-4507", "socket": "1x E27", "variantes": [{"cod": "LP-4507-MB", "term": "Microtexturado Blanco", "p": 78200}, {"cod": "LP-4507-MN", "term": "Microtexturado Negro", "p": 78200}], "id": 80},
+  {"cat": "pie", "nombre": "Gio de Pie", "modelo": "LP-4508", "socket": "1x E27", "variantes": [{"cod": "LP-4508-MN", "term": "Microtexturado Negro", "p": 106500}], "id": 81},
+  {"cat": "pie", "nombre": "Eos de Pie", "modelo": "LP-4509", "socket": "1x E27", "variantes": [{"cod": "LP-4509-MB", "term": "Microtexturado Blanco", "p": 78200}, {"cod": "LP-4509-MN", "term": "Microtexturado Negro", "p": 78200}], "id": 82},
+  {"cat": "pie", "nombre": "Mova de Pie", "modelo": "LP-4510", "socket": "1x E27", "variantes": [{"cod": "LP-4510-MB", "term": "Microtexturado Blanco", "p": 75700}, {"cod": "LP-4510-MN", "term": "Microtexturado Negro", "p": 75700}], "id": 83},
+  {"cat": "pie", "nombre": "Evah", "modelo": "LP-4511", "socket": "1x E27", "variantes": [{"cod": "LP-4511-MB", "term": "Microtexturado Blanco", "p": 90700}, {"cod": "LP-4511-MN", "term": "Microtexturado Negro", "p": 90700}], "id": 84},
+  {"cat": "pie", "nombre": "Tecno", "modelo": "LP-4512", "socket": "1x E27", "variantes": [{"cod": "LP-4512-MN", "term": "Microtexturado Negro", "p": 65700}], "id": 85},
+  {"cat": "pie", "nombre": "Loulu", "modelo": "LP-4513", "socket": "2x E27", "variantes": [{"cod": "LP-4513-MB", "term": "Microtexturado Blanco", "p": 117500}, {"cod": "LP-4513-MN", "term": "Microtexturado Negro", "p": 117500}], "id": 86},
+  {"cat": "pie", "nombre": "Trip", "modelo": "LP-4514", "socket": "1x E27", "variantes": [{"cod": "LP-4513-NS", "term": "Niquel Satinado / Lino", "p": 137500}, {"cod": "LP-4513-MN", "term": "Microtexturado Negro /lino", "p": 137500}], "id": 87},
+  {"cat": "pie", "nombre": "Riu", "modelo": "LP-4515", "socket": "1x E27", "variantes": [{"cod": "LP-4515-MN", "term": "Microtexturado Negro", "p": 93500}], "id": 88},
+  {"cat": "pie", "nombre": "Tripod", "modelo": "LP-4516", "socket": "1x E27", "variantes": [{"cod": "LP-4516-MN", "term": "Microtexturado Negro", "p": 160000}], "id": 89},
+  {"cat": "pie", "nombre": "Trion", "modelo": "LP-4517", "socket": "3x E27", "variantes": [{"cod": "LP-4517-MB", "term": "Microtexturado Blanco", "p": 131300}, {"cod": "LP-4517-MN", "term": "Microtexturado Negro", "p": 131300}, {"cod": "LP-4517-NS", "term": "Niquel Satinado", "p": 131300}, {"cod": "LP-4517-CR", "term": "Cromo", "p": 131300}], "id": 90},
+  {"cat": "pie", "nombre": "Orvo", "modelo": "LP-4518", "socket": "3x E27", "variantes": [{"cod": "LP-4518-MN", "term": "Microtexturado Negro", "p": 175000}, {"cod": "LP-4518-AR", "term": "Arena", "p": 175000}, {"cod": "LP-4518-CR", "term": "Cromo", "p": 175000}], "id": 91},
+  {"cat": "pie", "nombre": "Orvo-4G", "modelo": "LP-4519", "socket": "4x E27", "variantes": [{"cod": "LP-4519-CR", "term": "Cromo", "p": 156300}, {"cod": "LP-4519-MN", "term": "Microtexturado Negro", "p": 156300}], "id": 92},
+  {"cat": "pie", "nombre": "Nura", "modelo": "LP-4520", "socket": "1x E27", "variantes": [{"cod": "LP-4520-MB/L", "term": "Microtexturado Blanco / Lino", "p": 131300}, {"cod": "LP-4520-MB/A", "term": "Microtexturado Blanco / Arpillera", "p": 145000}, {"cod": "LP-4520-MN/L", "term": "Microtexturado Negro / Lino", "p": 131300}, {"cod": "LP-4520-MN/A", "term": "Microtexturado Negro / Arpillera", "p": 145000}], "id": 93},
+  {"cat": "pie", "nombre": "Double", "modelo": "LP-4521", "socket": "2x E27", "variantes": [{"cod": "LP-4521-MN", "term": "Microtexturado Negro", "p": 120700}], "id": 94},
+  {"cat": "pie", "nombre": "Gloss de Pie", "modelo": "LP-4000", "socket": "1x E27", "variantes": [{"cod": "LP-4000-NG", "term": "Negro Grafito", "p": 256300}, {"cod": "LP-4000-GB", "term": "Glossy Beige", "p": 256300}], "id": 95},
+  {"cat": "pie", "nombre": "Lumo", "modelo": "LP-4001", "socket": "1x E27", "variantes": [{"cod": "LP-4001-NM", "term": "Negro Mate", "p": 181600}], "id": 96},
+  {"cat": "pie", "nombre": "Nohrd de Pie", "modelo": "LP-4002", "socket": "3x GU10", "variantes": [{"cod": "LP-4002-BM", "term": "Beige Marfil", "p": 126600}, {"cod": "LP-4002-NG", "term": "Negro Grafito", "p": 126600}], "id": 97},
+  {"cat": "pie", "nombre": "Dual", "modelo": "LP-4003", "socket": "2x E27", "variantes": [{"cod": "LP-4003-BM", "term": "Blanco Mate", "p": 103300}, {"cod": "LP-4003-NM", "term": "Negro Mate", "p": 103300}], "id": 98},
+  {"cat": "pie", "nombre": "Nua", "modelo": "LP-4004", "socket": "5x G9", "variantes": [{"cod": "LP-4004-NM", "term": "Negro Mate", "p": 225000}], "id": 99},
+  {"cat": "pie", "nombre": "Trivet", "modelo": "LP-4005", "socket": "1x E27", "variantes": [{"cod": "LP-4005-NM", "term": "Negro Mate", "p": 150200}], "id": 100},
+  {"cat": "pie", "nombre": "Glob", "modelo": "LP-4006", "socket": "3x G9", "variantes": [{"cod": "LP-4006-NG", "term": "Negro Grafito", "p": 156300}], "id": 101},
+  {"cat": "pie", "nombre": "Nuit de Pie", "modelo": "LP-4007", "socket": "1x E27", "variantes": [{"cod": "LP-4007-NG", "term": "Negro Grafito", "p": 152500}], "id": 102},
+  {"cat": "pie", "nombre": "Bolet de Pie", "modelo": "LP-4008", "socket": "1x E27", "variantes": [{"cod": "LP-4008-NM", "term": "Negro Mate", "p": 112700}], "id": 103},
+  {"cat": "pie", "nombre": "Zafir de Pie", "modelo": "LP-4009", "socket": "1x E14", "variantes": [{"cod": "LP-4009-MN", "term": "Microtexturado Negro", "p": 93300}, {"cod": "LP-4009-DM", "term": "Dorado Mate", "p": 118000}, {"cod": "LP-4009-NS", "term": "Niquel Satinado", "p": 118000}], "id": 104},
+  {"cat": "pie", "nombre": "Mhira", "modelo": "LP-4010", "socket": "1x E27", "variantes": [{"cod": "LP-4010-NM/N", "term": "Negro Mate", "p": 186900}, {"cod": "LP-4010-NS/B", "term": "Niquel Satinado", "p": 206300}], "id": 105},
+  {"cat": "pie", "nombre": "Birka", "modelo": "LP-4011", "socket": "1x E27", "variantes": [{"cod": "LP-4011-NG", "term": "Negro Grafito", "p": 67800}], "id": 106},
+  {"cat": "colgantes", "nombre": "Gloss-M", "modelo": "LC-5000", "socket": "1x E27", "variantes": [{"cod": "LC-5000-DM", "term": "Dorado Mate", "p": 73200}, {"cod": "LC-5000-GM", "term": "Gris Mate", "p": 65700}], "id": 107},
+  {"cat": "colgantes", "nombre": "Gloss-L", "modelo": "LC-5001", "socket": "1x E27", "variantes": [{"cod": "LC-5001-NG", "term": "Negro Grafito", "p": 86900}, {"cod": "LC-5001-GB", "term": "Glossy Beige", "p": 93200}], "id": 108},
+  {"cat": "colgantes", "nombre": "Kiva-Colgante", "modelo": "LC-5002", "socket": "1x E27", "variantes": [{"cod": "LC-5002-BE", "term": "Beige Marfil", "p": 65700}, {"cod": "LC-5002-NG", "term": "Negro Grafito", "p": 65700}], "id": 109},
+  {"cat": "colgantes", "nombre": "Nodo-Colgante", "modelo": "LC-5003", "socket": "1x E27", "variantes": [{"cod": "LC-5003-BM", "term": "Blanco Mate", "p": 58200}, {"cod": "LC-5003-NM", "term": "Negro Mate", "p": 58200}], "id": 110},
+  {"cat": "colgantes", "nombre": "Krohn-300", "modelo": "LC-5004", "socket": "1x E27", "variantes": [{"cod": "LC-5004-BD", "term": "Beige/dorado", "p": 77700}, {"cod": "LC-5004-ND", "term": "Negro/dorado", "p": 77700}, {"cod": "LC-5004-GB", "term": "Glossy Beige", "p": 77700}], "id": 111},
+  {"cat": "colgantes", "nombre": "Krohn-400", "modelo": "LC-5005", "socket": "1x E27", "variantes": [{"cod": "LC-5005-ND", "term": "Negro/dorado", "p": 99300}], "id": 112},
+  {"cat": "colgantes", "nombre": "Nara-Colgante", "modelo": "LC-5006", "socket": "1x E27", "variantes": [{"cod": "LC-5006-MN", "term": "Microtexturado Negro", "p": 113900}], "id": 113},
+  {"cat": "colgantes", "nombre": "Sheen-S", "modelo": "LC-5007", "socket": "1x E27", "variantes": [{"cod": "LC-5007-BE", "term": "Beige Marfil", "p": 39900}, {"cod": "LC-5007-NM", "term": "Negro Mate", "p": 39900}], "id": 114},
+  {"cat": "colgantes", "nombre": "Sheen-L", "modelo": "LC-5008", "socket": "1x E27", "variantes": [{"cod": "LC-5008-BE", "term": "Beige Marfil", "p": 81000}, {"cod": "LC-5008-NM", "term": "Negro Mate", "p": 81000}], "id": 115},
+  {"cat": "colgantes", "nombre": "Glint Colgante", "modelo": "LC-5009", "socket": "1x E27", "variantes": [{"cod": "LC-5009-MN", "term": "Microtexturado Negro", "p": 76500}], "id": 116},
+  {"cat": "colgantes", "nombre": "Lior-350", "modelo": "LC-5010", "socket": "3x E14", "variantes": [{"cod": "LC-5010-MN", "term": "Microtexturado Negro", "p": 67700}, {"cod": "LC-5010-MB", "term": "Microtexturado Blanco", "p": 67700}, {"cod": "LC-5010-GM", "term": "Gris Mate", "p": 67700}], "id": 117},
+  {"cat": "colgantes", "nombre": "Lior-600", "modelo": "LC-5011", "socket": "3x E27", "variantes": [{"cod": "LC-5011-MN", "term": "Microtexturado Negro", "p": 156300}, {"cod": "LC-5011-MB", "term": "Microtexturado Blanco", "p": 156300}], "id": 118},
+  {"cat": "colgantes", "nombre": "Domo", "modelo": "LC-5012", "socket": "1x E27", "variantes": [{"cod": "LC-5012-ND", "term": "Negro/dorado", "p": 120000}], "id": 119},
+  {"cat": "colgantes", "nombre": "Mork", "modelo": "LC-5013", "socket": "1x E27", "variantes": [{"cod": "LC-5013-MN", "term": "Microtexturado Negro", "p": 102500}, {"cod": "LC-5013-MB", "term": "Microtexturado Blanco", "p": 102500}], "id": 120},
+  {"cat": "colgantes", "nombre": "Noir-600", "modelo": "LC-5014", "socket": "1x E27", "variantes": [{"cod": "LC-5014-ND", "term": "Negro/dorado", "p": 166900}, {"cod": "LC-5014-BD", "term": "Blanco/dorado", "p": 166900}, {"cod": "LC-5014-MN", "term": "Microtexturado Negro", "p": 166900}], "id": 121},
+  {"cat": "colgantes", "nombre": "Velka", "modelo": "LC-5015", "socket": "1x E27", "variantes": [{"cod": "LC-5015-MN", "term": "Microtexturado Negro", "p": 62700}, {"cod": "LC-5015-MB", "term": "Microtexturado Blanco", "p": 62700}], "id": 122},
+  {"cat": "colgantes", "nombre": "Ova", "modelo": "LC-5016", "socket": "1x E27", "variantes": [{"cod": "LC-5016-MN", "term": "Microtexturado Negro", "p": 63400}, {"cod": "LC-5016-MB", "term": "Microtexturado Blanco", "p": 63400}, {"cod": "LC-5016-TE", "term": "Terracota", "p": 63400}], "id": 123},
+  {"cat": "colgantes", "nombre": "Droop", "modelo": "LC-5017", "socket": "1x E27", "variantes": [{"cod": "LC-5017-MN", "term": "Microtexturado Negro", "p": 110300}, {"cod": "LC-5017-DM", "term": "Dorado Mate", "p": 115900}], "id": 124},
+  {"cat": "colgantes", "nombre": "Köra", "modelo": "LC-5018", "socket": "1x E27", "variantes": [{"cod": "LC-5018-GM", "term": "Gris Mate", "p": 132500}, {"cod": "LC-5018-BM", "term": "Blanco Mate", "p": 132500}], "id": 125},
+  {"cat": "colgantes", "nombre": "Teka", "modelo": "LC-5019", "socket": "1x E27", "variantes": [{"cod": "LC-5019-MN", "term": "Microtexturado Negro", "p": 93900}, {"cod": "LC-5019-BL", "term": "Blanco", "p": 93900}], "id": 126},
+  {"cat": "colgantes", "nombre": "Vitra Lineal-6", "modelo": "LC-5020", "socket": "6x G9", "variantes": [{"cod": "LC-5020-MN", "term": "Microtexturado Negro", "p": 234900}, {"cod": "LC-5020-DM", "term": "Dorado Mate", "p": 283200}], "id": 127},
+  {"cat": "colgantes", "nombre": "Vitra-Circular", "modelo": "LC-5021", "socket": "1x G9", "variantes": [{"cod": "LC-5021-MN", "term": "Microtexturado Negro", "p": 70300}, {"cod": "LC-5021-DM", "term": "Dorado Mate", "p": 88700}], "id": 128},
+  {"cat": "colgantes", "nombre": "Vitra-Oval", "modelo": "LC-5022", "socket": "1x G9", "variantes": [{"cod": "LC-5022-MN", "term": "Microtexturado Negro", "p": 70300}, {"cod": "LC-5022-DM", "term": "Dorado Mate", "p": 88700}], "id": 129},
+  {"cat": "apliques", "nombre": "Vitra-Doble", "modelo": "LA-6000", "socket": "2x G9", "variantes": [{"cod": "LA-6000-MN", "term": "Microtexturado Negro", "p": 65700}, {"cod": "LA-6000-DM", "term": "Dorado Mate", "p": 85300}], "id": 130},
+  {"cat": "apliques", "nombre": "Vara", "modelo": "LA-6001", "socket": "2x G9", "variantes": [{"cod": "LA-6001-MN", "term": "Microtexturado Negro", "p": 53200}, {"cod": "LA-6001-DM", "term": "Dorado Mate", "p": 68600}], "id": 131}
+];
+/* PRODUCTOS-FIN */
+
+/* Dibujos genéricos (se usan solo si el producto no tiene foto) */
+const DIBUJOS = {
+  escritorio:`<svg viewBox="0 0 100 100" fill="none" stroke="#8a7f74" stroke-width="2.5" stroke-linecap="round"><path d="M28 88h34" stroke-width="4"/><path d="M45 88V84M45 84L32 52M32 52L58 30"/><circle cx="32" cy="52" r="3" fill="#fff"/><path d="M54 24l16 6-10 18-14-10z" fill="#fff"/><path d="M60 48l8 6" opacity=".5"/></svg>`,
+  mesa:`<svg viewBox="0 0 100 100" fill="none" stroke="#8a7f74" stroke-width="2.5"><path d="M32 18h36l10 30H22z" fill="#fff"/><path d="M50 48v8"/><path d="M40 56c-4 6-4 22 2 30h16c6-8 6-24 2-30z" fill="#f4efe8"/></svg>`,
+  pie:`<svg viewBox="0 0 100 100" fill="none" stroke="#8a7f74" stroke-width="2.5"><path d="M38 8h24l8 20H30z" fill="#fff"/><path d="M50 28v58M50 40L36 92M50 40l14 52M50 40v52"/></svg>`,
+  colgantes:`<svg viewBox="0 0 100 100" fill="none" stroke="#8a7f74" stroke-width="2.5"><path d="M50 4v38"/><path d="M44 42h12v6H44z" fill="#fff"/><path d="M44 48c-16 4-24 18-24 30h60c0-12-8-26-24-30z" fill="#fff"/><path d="M42 78a8 8 0 0 0 16 0" fill="#f4efe8"/></svg>`,
+  apliques:`<svg viewBox="0 0 100 100" fill="none" stroke="#8a7f74" stroke-width="2.5"><rect x="18" y="34" width="10" height="32" rx="2" fill="#fff"/><path d="M28 50h20"/><path d="M48 32h22l10 32H38z" fill="#fff"/></svg>`
+};
+
+/* =====================================================================
+   FUNCIONAMIENTO DEL CATÁLOGO (no hace falta tocar)
+   ===================================================================== */
+const $ = s => document.querySelector(s);
+const pesos = n => "$" + Math.round(n).toLocaleString("es-AR");
+const alPublico = m => Math.ceil(m * (1 + CONFIG.recargo) / CONFIG.redondeo) * CONFIG.redondeo;
+const conTransf = n => n * (1 - CONFIG.descuentoTransferencia);
+const cat = id => CATEGORIAS.find(c => c.id === id) || {nombre:"", singular:"Lámpara"};
+const linkWA = txt => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(txt)}`;
+const linkMail = (asunto, cuerpo) => `mailto:${CONFIG.email}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+const sinTildes = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+const buscarProd = id => PRODUCTOS.find(p => p.id == id);
+const foto = p => FOTOS[p.modelo] ? `<img src="${FOTOS[p.modelo]}" alt="${p.nombre}" loading="lazy">` : (DIBUJOS[p.cat] || DIBUJOS.mesa);
+const conPrecio = p => p.variantes.filter(v => v.p);
+const desde = p => { const ps = conPrecio(p).map(v => v.p); return ps.length ? Math.min(...ps) : null; };
+const variaPrecio = p => new Set(conPrecio(p).map(v => v.p)).size > 1;
+
+/* Colores de muestra para cada terminación */
+const COLORES = [["dorado","#c9a45c"],["niquel","#b8babc"],["cromo","#dfe3e6"],["arena","#d8c7a8"],["gris","#8e8e8e"],["naranja","#e07a2e"],
+  ["terracota","#b5563a"],["verde","#5f7d5b"],["azul","#2c4b7a"],["madera oscura","#5a3d2b"],["madera clara","#c9a37a"],["beige","#e6dccb"],["blanco","#f6f6f3"],["negro","#222"]];
+function muestra(term){
+  const t = sinTildes(term.split("/")[0]);
+  const c = (COLORES.find(([k]) => t.includes(k)) || [,"#ccc"])[1];
+  return `<span class="punto" style="background:${c}" title="${term}"></span>`;
+}
+function puntos(p){
+  const unicos = [...new Map(p.variantes.map(v => [v.term.split("/")[0].trim(), v])).values()];
+  return `<div class="puntos">${unicos.slice(0,8).map(v => muestra(v.term)).join("")}<span>${p.variantes.length} ${p.variantes.length===1?"terminación":"terminaciones"}</span></div>`;
+}
+
+const ICO_WA = `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>`;
+const ICO_MAIL = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>`;
+
+function mensaje(p, v){
+  let t = `Hola, quería consultar por la ${cat(p.cat).singular.toLowerCase()} ${p.nombre} (${p.modelo})`;
+  if (v) t += `, terminación ${v.term} (cód. ${v.cod})` + (CONFIG.mostrarPrecios && v.p ? `, ${pesos(alPublico(v.p))}` : "");
+  return t + ".\n¿Tienen stock?";
+}
+function botonesConsulta(p, v){
+  const txt = mensaje(p, v);
+  return `<div class="consultar">
+    <a class="c-wa" href="${linkWA(txt)}" target="_blank" rel="noopener">${ICO_WA} WhatsApp</a>
+    <a class="c-mail" href="${linkMail("Consulta: " + p.nombre + " " + p.modelo, txt + "\n\nMi nombre:\nMi teléfono:\nLocalidad:")}">${ICO_MAIL} Email</a>
+  </div>`;
+}
+function bloquePrecio(m, prefijo=""){
+  if (!CONFIG.mostrarPrecios || !m) return `<div class="precio"><div class="p" style="font-size:20px;color:var(--azul)">Consultar precio</div></div>`;
+  const pp = alPublico(m);
+  return `<div class="precio"><div class="desde">${prefijo || "&nbsp;"}</div><div class="p">${pesos(pp)}</div>${CONFIG.descuentoTransferencia ? `<div class="t">${pesos(conTransf(pp))} con transferencia</div>` : ""}</div>`;
+}
+
+let categoria = "todos", texto = "", orden = "rel";
+
+function dibujarMenu(){
+  $("#menu").innerHTML = [{id:"todos", nombre:"Todos los productos"}, ...CATEGORIAS].map(c =>
+    `<button class="${categoria===c.id?"activo":""}" data-cat="${c.id}">${c.nombre}</button>`).join("");
+  $("#pieCats").innerHTML = CATEGORIAS.map(c => `<a href="#productos" data-cat="${c.id}">${c.nombre}</a>`).join("");
+}
+
+function dibujarProductos(){
+  const q = sinTildes(texto.trim());
+  let lista = PRODUCTOS.filter(p => (categoria === "todos" || p.cat === categoria) &&
+    sinTildes([p.nombre, p.modelo, cat(p.cat).singular, p.socket, ...p.variantes.map(v => v.term + " " + v.cod)].join(" ")).includes(q));
+  const val = p => desde(p) ?? Infinity;
+  if (orden === "asc")  lista.sort((a,b) => val(a) - val(b));
+  if (orden === "desc") lista.sort((a,b) => (desde(b) ?? -1) - (desde(a) ?? -1));
+  if (orden === "az")   lista.sort((a,b) => a.nombre.localeCompare(b.nombre));
+  $("#tituloProd").textContent = q ? `Resultados para "${texto.trim()}"` : (categoria === "todos" ? "Todos los productos" : cat(categoria).nombre);
+  $("#cantProd").textContent = `${lista.length} modelo${lista.length !== 1 ? "s" : ""}`;
+  $("#grilla").innerHTML = lista.length ? lista.map(p => `
+    <article class="prod">
+      <div class="foto" data-ver="${p.id}">${foto(p)}</div>
+      <div class="info">
+        <span class="mod">${cat(p.cat).singular} · ${p.modelo}</span>
+        <h3 data-ver="${p.id}">${p.nombre}</h3>
+        <span class="det">Portalámpara ${p.socket}</span>
+        ${puntos(p)}
+        ${bloquePrecio(desde(p), variaPrecio(p) ? "Desde" : "")}
+        <button class="ver" data-ver="${p.id}">Ver terminaciones y consultar</button>
+      </div>
+    </article>`).join("") : `<p class="vacio">No encontramos productos con esa búsqueda.<br>Probá con otra palabra o <a href="${linkWA("Hola, estoy buscando: " + texto)}" target="_blank" style="color:var(--azul);font-weight:700;text-decoration:underline">consultanos por WhatsApp</a>.</p>`;
+}
+
+let fichaProd = null;
+function abrirFicha(id){
+  const p = fichaProd = buscarProd(id);
+  $("#fichaBox").innerHTML = `
+    <button class="ficha-x" id="cerrarFicha">Cerrar ✕</button>
+    <div class="foto">${foto(p)}</div>
+    <div class="ficha-info">
+      <span class="cat">${cat(p.cat).singular} · Modelo ${p.modelo}</span>
+      <h3>${p.nombre}</h3>
+      <span class="det">Portalámpara ${p.socket} (lámpara no incluida)</span>
+      <p class="elige">Elegí la terminación:</p>
+      <div class="variantes">${p.variantes.map((v,i) => `
+        <label class="var">
+          <input type="radio" name="variante" value="${i}" ${i===0?"checked":""}>
+          ${muestra(v.term)}
+          <span class="vt">${v.term}<small>Cód. ${v.cod}</small></span>
+          <b>${CONFIG.mostrarPrecios && v.p ? pesos(alPublico(v.p)) : "Consultar"}</b>
+        </label>`).join("")}</div>
+      <div id="fichaPrecio">${bloquePrecio(p.variantes[0].p)}</div>
+      <div id="fichaBotones">${botonesConsulta(p, p.variantes[0])}</div>
+    </div>`;
+  $("#ficha").classList.add("on"); $("#fondo").classList.add("on");
+}
+function cerrarFicha(){ $("#ficha").classList.remove("on"); $("#fondo").classList.remove("on"); }
+
+document.addEventListener("change", e => {
+  if (e.target.name !== "variante" || !fichaProd) return;
+  const v = fichaProd.variantes[+e.target.value];
+  $("#fichaPrecio").innerHTML = bloquePrecio(v.p);
+  $("#fichaBotones").innerHTML = botonesConsulta(fichaProd, v);
+});
+document.addEventListener("click", e => {
+  if (e.target.id === "ficha" || e.target.id === "cerrarFicha" || e.target.id === "fondo") return cerrarFicha();
+  const t = e.target.closest("[data-cat],[data-ver]");
+  if (!t) return;
+  if (t.dataset.ver) abrirFicha(t.dataset.ver);
+  if (t.dataset.cat){ e.preventDefault(); categoria = t.dataset.cat; texto = ""; $("#buscar").value = ""; dibujarMenu(); dibujarProductos(); $("#productos").scrollIntoView({behavior:"smooth"}); }
+});
+$("#formBuscar").addEventListener("submit", e => { e.preventDefault(); texto = $("#buscar").value; categoria = "todos"; dibujarMenu(); dibujarProductos(); $("#productos").scrollIntoView({behavior:"smooth"}); });
+$("#buscar").addEventListener("input", e => { texto = e.target.value; dibujarProductos(); });
+$("#orden").addEventListener("change", e => { orden = e.target.value; dibujarProductos(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") cerrarFicha(); });
+if (!CONFIG.mostrarPrecios) $("#ordenLabel").style.display = "none";
+
+/* Datos de contacto en la página */
+$("#horario").textContent = $("#horarioContacto").textContent = $("#horarioPie").textContent = CONFIG.horario;
+$("#telTop").textContent = CONFIG.telefono;
+const waGeneral = linkWA("Hola, tengo una consulta.");
+["#waHeader","#waBanner","#waFlot","#waContacto","#waPie"].forEach(id => $(id).href = waGeneral);
+$("#waContacto").textContent = CONFIG.telefono;
+$("#telContacto").textContent = CONFIG.telefono;
+$("#telContacto").href = "tel:" + CONFIG.telefono.replace(/\D/g, "");
+$("#mailContacto").textContent = CONFIG.email;
+$("#mailContacto").href = $("#mailPie").href = linkMail("Consulta desde la web", "Hola, quería consultar por:\n\nMi nombre:\nMi teléfono:");
+$("#anio").textContent = new Date().getFullYear();
+
+dibujarMenu(); dibujarProductos();
+</script>
+</body>
+</html>
