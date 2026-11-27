@@ -700,7 +700,7 @@ if (!CONFIG.mostrarPrecios) $("#ordenLabel").style.display = "none";
 const waGeneral = linkWA("Hola, tengo una consulta.");
 ["#waHeader","#waBanner","#waFlot","#waContactoBtn","#waPie"].forEach(id => $(id).href = waGeneral);
 $("#telTop").textContent = $("#telContacto").textContent = CONFIG.telefono;
-$("#telContacto").href = "tel:" + CONFIG.telefono.replace(/\D/g, "");
+$("#telContacto").href = "tel:+" + CONFIG.whatsapp;
 $("#mailContacto").textContent = CONFIG.email;
 $("#mailContacto").href = $("#mailPie").href = $("#mailContactoBtn").href = linkMail("Consulta desde la web", "Hola, quería consultar por:\n\nMi nombre:\nMi teléfono:");
 $("#horarioContacto").textContent = $("#horarioPie").textContent = CONFIG.horario;
